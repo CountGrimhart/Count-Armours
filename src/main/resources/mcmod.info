@@ -6,10 +6,10 @@
 "version": "1.0",
 "credits": "Created by Count_Grimhart, thanks to the videos of CJMinecraft videos",
 "logoFile": "",
-"mcversion": "",
+"mcversion": "1.10.2",
 "url": "",
 "updateUrl": "",
-"authors": [ "Count Grimhart" ],
+"authors": [ "Count Grimhart", "The_Fireplace" ],
 "parent":"",
 "screenshots": [],
 "dependencies": [

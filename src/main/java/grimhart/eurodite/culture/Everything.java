@@ -14,9 +14,6 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 
 @Mod(modid = Reference.MODID, name = Reference.NAME, version = Reference.VERSION)
 public class Everything {
-	
-
-	
 	@Mod.Instance(Reference.MODID)
 	public static Everything instance;
 	

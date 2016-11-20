@@ -2,7 +2,6 @@ package grimhart.eurodite.culture.init;
 
 import grimhart.eurodite.culture.Reference;
 import grimhart.eurodite.culture.items.ItemModArmour;
-import grimhart.eurodite.culture.items.ItemTinIngot;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.init.SoundEvents;
 import net.minecraft.inventory.EntityEquipmentSlot;
@@ -13,6 +12,8 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.common.util.EnumHelper;
 import net.minecraftforge.fml.common.registry.GameRegistry;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class ModArmour {
 	//Red +Armour
@@ -170,7 +171,8 @@ public class ModArmour {
 		registerItem(EuroditeLeggingsG3);
 		
 	}
-	
+
+	@SideOnly(Side.CLIENT)
 	public static void registerRenders() {
 		//RED
 		registerRender(EuroditeHelmet);
@@ -221,7 +223,8 @@ public class ModArmour {
 	public static void registerItem(Item item) {
 		GameRegistry.register(item);
 	}
-	
+
+	@SideOnly(Side.CLIENT)
 	public static void registerRender(Item item) {
 		ModelLoader.setCustomModelResourceLocation(item, 0, new ModelResourceLocation( new ResourceLocation(Reference.MODID, item.getUnlocalizedName().substring(5)), "inventory"));
 	}

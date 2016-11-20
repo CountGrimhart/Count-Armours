@@ -12,7 +12,5 @@ public class ClientProxy extends CommonProxy {
 		ModItems.registerRenders();
 		ModTools.registerRenders();
 		ModArmour.registerRenders();
-	
-	
 	}
 }
