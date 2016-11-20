@@ -1,0 +1,19 @@
+[
+{
+"modid": "eurodite",
+"name": "Eurodite Culture Pack",
+"description": "Lots and lots of armours!",
+"version": "1.0",
+"credits": "Created by Count_Grimhart, thanks to the videos of CJMinecraft videos",
+"logoFile": "",
+"mcversion": "",
+"url": "",
+"updateUrl": "",
+"authors": [ "Count Grimhart" ],
+"parent":"",
+"screenshots": [],
+"dependencies": [
+"mod_MinecraftForge"
+]
+}
+]
