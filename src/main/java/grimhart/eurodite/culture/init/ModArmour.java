@@ -23,7 +23,7 @@ public class ModArmour {
 	public static ArmorMaterial euroditeDMaterial = EnumHelper.addArmorMaterial("eurodited", Reference.MODID + ":eurodited", 15, new int[] {3,8,6,3}, 10, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 2.0F);
 	public static ArmorMaterial euroditeEMaterial = EnumHelper.addArmorMaterial("euroditee", Reference.MODID + ":euroditee", 15, new int[] {3,8,6,3}, 10, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 2.0F);
 	public static ArmorMaterial euroditeFMaterial = EnumHelper.addArmorMaterial("euroditef", Reference.MODID + ":euroditef", 15, new int[] {3,8,6,3}, 10, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 2.0F);
-	//Green
+	//Green + paladin Gold armour
 	public static ArmorMaterial euroditeG1Material = EnumHelper.addArmorMaterial("euroditeg1", Reference.MODID + ":euroditeg1", 15, new int[] {3,8,6,3}, 10, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 2.0F);
 	public static ArmorMaterial euroditeG2Material = EnumHelper.addArmorMaterial("euroditeg2", Reference.MODID + ":euroditeg2", 15, new int[] {3,8,6,3}, 10, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 2.0F);
 	public static ArmorMaterial euroditeG3Material = EnumHelper.addArmorMaterial("euroditeg3", Reference.MODID + ":euroditeg3", 15, new int[] {3,8,6,3}, 10, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 2.0F);
