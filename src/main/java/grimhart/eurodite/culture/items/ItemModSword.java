@@ -1,7 +1,6 @@
 package grimhart.eurodite.culture.items;
 
 import grimhart.eurodite.culture.Reference;
-import net.minecraft.item.ItemPickaxe;
 import net.minecraft.item.ItemSword;
 import net.minecraft.item.Item.ToolMaterial;
 import net.minecraft.util.ResourceLocation;

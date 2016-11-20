@@ -13,9 +13,9 @@ import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 
 @Mod(modid = Reference.MODID, name = Reference.NAME, version = Reference.VERSION)
-public class Everything {
+public class EuroditeCulture {
 	@Mod.Instance(Reference.MODID)
-	public static Everything instance;
+	public static EuroditeCulture instance;
 	
 	@SidedProxy(serverSide = Reference.SERVER_PROXY_CLASS, clientSide = Reference.CLIENT_PROXY_CLASS)
 	public static CommonProxy proxy;
