@@ -25,8 +25,14 @@ minecraft {
     mappings = "snapshot_20161119"
 }
 
-dependencies {
+repositories {
+    maven { // The_Fireplace mods
+        url "http://maven.brainstonemod.com"
+    }
+}
 
+dependencies {
+    compile "the_fireplace.overlord:Overlord:7.0.0:deobf"
 }
 
 processResources
