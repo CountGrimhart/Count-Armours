@@ -26,7 +26,7 @@ public class ItemModArmour extends ItemArmor{
 	@SideOnly(Side.CLIENT)
 	@Nonnull
 	public ModelBiped getArmorModel(EntityLivingBase entityLiving, ItemStack stack, EntityEquipmentSlot armorSlot, ModelBiped defaultModel) {
-		if (stack != null) {
+		if (!stack.isEmpty()) {
 			ModelBiped armorModel = null;
 			if (stack.getItem() == ModArmour.EuroditeHelmet) {//TODO: Replace EuroditeHelmet with whatever you want it to be
 				armorModel = EuroditeCulture.proxy.getArmorModel(0);
