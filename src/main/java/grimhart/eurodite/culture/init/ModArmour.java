@@ -28,9 +28,11 @@ public class ModArmour {
 	public static ArmorMaterial euroditeG1Material = EnumHelper.addArmorMaterial("euroditeg1", Reference.MODID + ":euroditeg1", 15, new int[] {3,8,6,3}, 10, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 2.0F);
 	public static ArmorMaterial euroditeG2Material = EnumHelper.addArmorMaterial("euroditeg2", Reference.MODID + ":euroditeg2", 15, new int[] {3,8,6,3}, 10, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 2.0F);
 	public static ArmorMaterial euroditeG3Material = EnumHelper.addArmorMaterial("euroditeg3", Reference.MODID + ":euroditeg3", 15, new int[] {3,8,6,3}, 10, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 2.0F);
-	
-	
-	
+	//Crusader Sets
+	public static ArmorMaterial euroditeCR1Material = EnumHelper.addArmorMaterial("euroditecr1", Reference.MODID + ":euroditecr1", 15, new int[] {3,8,6,3}, 10, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 2.0F);
+	public static ArmorMaterial euroditeCR2Material = EnumHelper.addArmorMaterial("euroditecr2", Reference.MODID + ":euroditecr2", 15, new int[] {3,8,6,3}, 10, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 2.0F);
+	public static ArmorMaterial euroditeCR3Material = EnumHelper.addArmorMaterial("euroditecr3", Reference.MODID + ":euroditecr3", 15, new int[] {3,8,6,3}, 10, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 2.0F);
+	public static ArmorMaterial euroditeCR4Material = EnumHelper.addArmorMaterial("euroditecr4", Reference.MODID + ":euroditecr4", 15, new int[] {3,8,6,3}, 10, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 2.0F);
 	
 	
 	//RED
@@ -74,8 +76,24 @@ public class ModArmour {
 	public static ItemArmor EuroditeHelmetG3;
 	public static ItemArmor EuroditeChestplateG3;
 	public static ItemArmor EuroditeLeggingsG3;
-	
-	
+
+
+	//Crusaders
+	public static ItemArmor EuroditeHelmetCR1;
+	public static ItemArmor EuroditeChestplateCR1;
+	public static ItemArmor EuroditeLeggingsCR1;
+
+	public static ItemArmor EuroditeHelmetCR2;
+	public static ItemArmor EuroditeChestplateCR2;
+	public static ItemArmor EuroditeLeggingsCR2;
+
+	public static ItemArmor EuroditeHelmetCR3;
+	public static ItemArmor EuroditeChestplateCR3;
+	public static ItemArmor EuroditeLeggingsCR3;
+
+	public static ItemArmor EuroditeHelmetCR4;
+    public static ItemArmor EuroditeLeggingsCR4;
+
 	public static void init() {
 		//RED
 		EuroditeHelmet = new ItemModArmour(euroditeMaterial, 1, EntityEquipmentSlot.HEAD, "helmet_a");
@@ -121,8 +139,23 @@ public class ModArmour {
 		EuroditeHelmetG3 = new ItemModArmour(euroditeG3Material, 1, EntityEquipmentSlot.HEAD, "helmet_g3");
 		EuroditeChestplateG3 = new ItemModArmour(euroditeG3Material, 1, EntityEquipmentSlot.CHEST, "chest_g3");
 		EuroditeLeggingsG3 = new ItemModArmour(euroditeG3Material, 2, EntityEquipmentSlot.LEGS, "tunic_g3");
-		
-		
+
+		//Crusaders
+        EuroditeHelmetCR1 = new ItemModArmour(euroditeCR1Material, 1, EntityEquipmentSlot.HEAD, "helmet_cr1");
+        EuroditeChestplateCR1 = new ItemModArmour(euroditeCR1Material, 1, EntityEquipmentSlot.CHEST, "chest_cr1");
+        EuroditeLeggingsCR1 = new ItemModArmour(euroditeCR1Material, 2, EntityEquipmentSlot.LEGS, "tunic_cr1");
+
+        EuroditeHelmetCR2 = new ItemModArmour(euroditeCR2Material, 1, EntityEquipmentSlot.HEAD, "helmet_cr2");
+            //Invisible Chest
+        EuroditeChestplateCR2 = new ItemModArmour(euroditeCR2Material, 1, EntityEquipmentSlot.CHEST, "chest_cr2");
+        EuroditeLeggingsCR2 = new ItemModArmour(euroditeCR2Material, 2, EntityEquipmentSlot.LEGS, "tunic_cr2");
+
+        EuroditeHelmetCR3 = new ItemModArmour(euroditeCR3Material, 1, EntityEquipmentSlot.HEAD, "helmet_cr3");
+        EuroditeChestplateCR3 = new ItemModArmour(euroditeCR3Material, 1, EntityEquipmentSlot.CHEST, "chest_cr3");
+        EuroditeLeggingsCR3 = new ItemModArmour(euroditeCR3Material, 2, EntityEquipmentSlot.LEGS, "tunic_cr3");
+
+        EuroditeHelmetCR4 = new ItemModArmour(euroditeCR4Material, 1, EntityEquipmentSlot.HEAD, "helmet_cr4");
+        EuroditeLeggingsCR4 = new ItemModArmour(euroditeCR4Material, 2, EntityEquipmentSlot.LEGS, "tunic_cr4");
 	}
 	public static void register() {
 		
@@ -169,6 +202,22 @@ public class ModArmour {
 		registerItem(EuroditeHelmetG3);
 		registerItem(EuroditeChestplateG3);
 		registerItem(EuroditeLeggingsG3);
+
+		//Crusader
+        registerItem(EuroditeHelmetCR1);
+        registerItem(EuroditeChestplateCR1);
+        registerItem(EuroditeLeggingsCR1);
+
+        registerItem(EuroditeHelmetCR2);
+        registerItem(EuroditeChestplateCR2);
+        registerItem(EuroditeLeggingsCR2);
+
+        registerItem(EuroditeHelmetCR3);
+        registerItem(EuroditeChestplateCR3);
+        registerItem(EuroditeLeggingsCR3);
+
+        registerItem(EuroditeHelmetCR4);
+        registerItem(EuroditeLeggingsCR4);
 		
 	}
 
@@ -217,7 +266,23 @@ public class ModArmour {
 		//Space
 		registerRender(EuroditeHelmetG3);
 		registerRender(EuroditeChestplateG3);
-		registerRender(EuroditeLeggingsG3);	
+		registerRender(EuroditeLeggingsG3);
+
+		//Crusader
+        registerRender(EuroditeHelmetCR1);
+        registerRender(EuroditeChestplateCR1);
+        registerRender(EuroditeLeggingsCR1);
+
+        registerRender(EuroditeHelmetCR2);
+        registerRender(EuroditeChestplateCR2);
+        registerRender(EuroditeLeggingsCR2);
+
+        registerRender(EuroditeHelmetCR3);
+        registerRender(EuroditeChestplateCR3);
+        registerRender(EuroditeLeggingsCR3);
+
+        registerRender(EuroditeHelmetCR4);
+        registerRender(EuroditeLeggingsCR4);
 	}
 	
 	public static void registerItem(Item item) {

@@ -20,6 +20,7 @@ public class ItemModArmour extends ItemArmor{
 		super(materialIn, renderIndexIn, equipmentSlotIn);
 		this.setUnlocalizedName(unlocalizedName);
 		this.setRegistryName(new ResourceLocation(Reference.MODID, unlocalizedName));
+		/**
 	}
 
 	@Override
@@ -51,5 +52,6 @@ public class ItemModArmour extends ItemArmor{
 			}
 		}
 		return super.getArmorModel(entityLiving, stack, armorSlot, defaultModel);
+	*/
 	}
 }
