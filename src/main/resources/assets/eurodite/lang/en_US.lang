@@ -2,7 +2,68 @@ item.tin_ingot.name=Eurodite Coin
 item.long_sword.name=Long Sword
 
 
-item.helmet_a.name=Helmet A
-item.chest_a.name=Chestplate A
-item.tunic_a.name=Red Tunic A
+item.helmet_a.name=Covered Barbute
+item.chest_a.name=Chain mail and Pauldrons
+item.tunic_a.name=Red Rose Tunic
 item.charm_a.name=Charm A
+
+item.helmet_b.name=Chainmail Coif
+item.chest_b.name=Chainmail
+item.tunic_b.name=Poppy Tunic
+
+item.helmet_c.name=Helm
+item.chest_c.name=Cruiass
+item.tunic_c.name=Redpoll Tunic
+
+item.helmet_d.name=Armet
+item.chest_d.name=Breastplate
+item.tunic_d.name=Blue Rose Tunic
+
+item.helmet_e.name=Salade
+item.chest_e.name=Breastplate with Pauldrons
+item.tunic_e.name=Blue Conquistadors Tunic
+
+item.helmet_f.name=Barbute
+item.chest_f.name=platemail
+item.tunic_f.name=Bluepoll Tunic
+
+item.helmet_cr1.name=Gold Trim Heaume
+item.chest_cr1.name=Gold Trim Pauldrons
+item.tunic_cr1.name=Foreign Knight's Tunic
+
+item.helmet_cr2.name=Heaume
+item.chest_cr2.name=Under Armour
+item.tunic_cr2.name=Foreign Knight's Tunic
+
+item.helmet_cr3.name=Red Heaume
+item.chest_cr3.name=Red Pauldrons
+item.tunic_cr3.name=Foreign Knight's Tunic
+
+item.helmet_cr4.name=Gold Heaume
+item.tunic_cr4.name=Foreign Knight's Tunic
+
+item.helmet_g1.name=Paladin Covered Barbute
+item.chest_g1.name=Paladin Pauldrons
+item.tunic_g1.name=De Verde Tunic
+
+item.helmet_g2.name=Paladin Armet
+item.chest_g2.name=Paladin Breastplate
+item.tunic_g2.name=Green Sun Tunic
+
+item.helmet_g3.name=Paladin Barbute
+item.chest_g3.name=Paladin Plate Armour
+item.tunic_g3.name=Creeper Knight Tunic
+
+item.helmet_p1.name=Ash Knight Salade
+item.chest_p1.name=Ash Knight Plate Armour
+item.tunic_p1.name=End Looker Tunic
+
+item.helmet_p2.name=Ash Knight Covered Barbute
+item.chest_p2.name=Ash Knight Plate Armour
+item.tunic_p2.name=End Finder Tunic
+
+item.tunic_p3.name=End Tunic
+
+item.tunic_o1.name=Orange Tunic
+item.tunic_o2.name=Orange Cross Tunic
+item.tunic_o3.name=Orange Moon Tunic
