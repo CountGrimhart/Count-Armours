@@ -20,7 +20,7 @@ public class ItemModArmour extends ItemArmor{
 		super(materialIn, renderIndexIn, equipmentSlotIn);
 		this.setUnlocalizedName(unlocalizedName);
 		this.setRegistryName(new ResourceLocation(Reference.MODID, unlocalizedName));
-		/**
+		this.setCreativeTab(EuroditeCulture.tabEurodite);
 	}
 
 	@Override
@@ -29,7 +29,7 @@ public class ItemModArmour extends ItemArmor{
 	public ModelBiped getArmorModel(EntityLivingBase entityLiving, ItemStack stack, EntityEquipmentSlot armorSlot, ModelBiped defaultModel) {
 		if (!stack.isEmpty()) {
 			ModelBiped armorModel = null;
-			if (stack.getItem() == ModArmour.EuroditeHelmet) {//TODO: Replace EuroditeHelmet with whatever you want it to be
+			if (stack.getItem() == ModArmour.EuroditeHelmetBU1) {
 				armorModel = EuroditeCulture.proxy.getArmorModel(0);
 			}
 
@@ -52,6 +52,5 @@ public class ItemModArmour extends ItemArmor{
 			}
 		}
 		return super.getArmorModel(entityLiving, stack, armorSlot, defaultModel);
-	*/
 	}
 }
