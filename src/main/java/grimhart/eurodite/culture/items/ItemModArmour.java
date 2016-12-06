@@ -12,8 +12,6 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-import javax.annotation.Nonnull;
-
 public class ItemModArmour extends ItemArmor{
 
 	public ItemModArmour(ArmorMaterial materialIn, int renderIndexIn, EntityEquipmentSlot equipmentSlotIn, String unlocalizedName) {
@@ -25,7 +23,6 @@ public class ItemModArmour extends ItemArmor{
 
 	@Override
 	@SideOnly(Side.CLIENT)
-	@Nonnull
 	public ModelBiped getArmorModel(EntityLivingBase entityLiving, ItemStack stack, EntityEquipmentSlot armorSlot, ModelBiped defaultModel) {
 		if (!stack.isEmpty()) {
 			ModelBiped armorModel = null;
@@ -51,6 +48,6 @@ public class ItemModArmour extends ItemArmor{
 				return armorModel;
 			}
 		}
-		return super.getArmorModel(entityLiving, stack, armorSlot, defaultModel);
+		return defaultModel;
 	}
 }
