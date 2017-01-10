@@ -1,5 +1,6 @@
 package grimhart.eurodite.culture.init;
 
+
 import grimhart.eurodite.culture.Reference;
 import grimhart.eurodite.culture.items.ItemTinIngot;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
@@ -9,6 +10,8 @@ import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
+
+
 
 public class ModItems {
 	
@@ -22,6 +25,7 @@ public class ModItems {
 	public static void register() {
 		registerItem(tinIngot);
 		registerItem(tinBag);
+
 	}
 	@SideOnly(Side.CLIENT)
 	public static void registerRenders() {
