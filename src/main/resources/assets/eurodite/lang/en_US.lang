@@ -68,4 +68,86 @@ item.tunic_o1.name=Orange Tunic
 item.tunic_o2.name=Orange Cross Tunic
 item.tunic_o3.name=Orange Moon Tunic
 
+item.helmsb_1.name=Black Samurai Helmet
+item.chestsb_1.name=Black Samurai Chestplate
+item.yukatasb_1.name=Black Yukata
+item.legasb_1.name=Black Leg pads
+
+item.helmsb_2.name=Black Samurai Demon Helmet
+item.chestsb_2.name=Black Samurai Chestplate with pauldrons
+
+item.chestsb_3.name=Black Samurai pauldrons
+
+item.helmab_1.name=White Ashigaru Helmet
+item.chestab_1.name=White Ashigaru Chestplate
+
+item.helmsbl_1.name=Blue Samurai Helmet
+item.chestsbl_1.name=Blue Samurai Chestplate
+item.yukatasbl_1.name=Blue Yukata
+item.legasbl_1.name=Blue Leg pads
+
+item.helmsbl_2.name=Blue Samurai Demon Helmet
+item.chestsbl_2.name=Blue Samurai Chestplate with pauldrons
+
+item.chestsbl_3.name=Blue Samurai pauldrons
+
+item.helmabl_1.name=Blue Ashigaru Helmet
+item.chestabl_1.name=Blue Ashigaru Chestplate
+
+item.helmsg_1.name=Green Samurai Helmet
+item.chestsg_1.name=Green Samurai Chestplate
+item.yukatasg_1.name=Green Yukata
+item.legasg_1.name=Green Leg pads
+
+item.helmsg_2.name=Green Samurai Demon Helmet
+item.chestsg_2.name=Green Samurai Chestplate with pauldrons
+
+item.chestsg_3.name=Green Samurai pauldrons
+
+item.helmag_1.name=Green Ashigaru Helmet
+item.chestag_1.name=Green Ashigaru Chestplate
+
+item.helmsr_1.name=Red Samurai Helmet
+item.chestsr_1.name=Red Samurai Chestplate
+item.yukatasr_1.name=Red Yukata
+item.legasr_1.name=Red Leg pads
+
+item.helmsr_2.name=Red Samurai Demon Helmet
+item.chestsr_2.name=Red Samurai Chestplate with pauldrons
+
+item.chestsr_3.name=Red Samurai pauldrons
+
+item.helmar_1.name=Red Ashigaru Helmet
+item.chestar_1.name=Red Ashigaru Chestplate
+
+item.helmsw_1.name=White Samurai Helmet
+item.chestsw_1.name=White Samurai Chestplate
+item.yukatasw_1.name=White Yukata
+item.legasw_1.name=White Leg pads
+
+item.helmsw_2.name=White Samurai Demon Helmet
+item.chestsw_2.name=White Samurai Chestplate with pauldrons
+
+item.chestsw_3.name=White Samurai pauldrons
+
+item.helmaw_1.name=Ashigaru Helmet
+item.chestaw_1.name=Ashigaru Chestplate
+
+item.helmac_1.name=Cyan Ashigaru Helmet
+item.chestac_1.name=Cyan Ashigaru Chestplate
+item.helmay_1.name=Yellow Ashigaru Helmet
+item.chestay_1.name=Yellow Ashigaru Chestplate
+item.helmao_1.name=Orange Ashigaru Helmet
+item.chestao_1.name=Orange Ashigaru Chestplate
+item.helmap_1.name=Purple Ashigaru Helmet
+item.chestap_1.name=Purple Ashigaru Chestplate
+
+item.helmana_1.name=Thatch Ashigaru Helmet
+
+item.yukatasc_1.name=Cyan Yukata
+item.yukatasy_1.name=Yellow Yukata
+item.yukataso_1.name=Orange Yukata
+item.yukatasp_1.name=Purple Yukata
+
+
 item.helmet_bu1.name=Bucket Helmet

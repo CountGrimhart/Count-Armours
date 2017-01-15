@@ -14,6 +14,7 @@ public class RecipeHandler {
 	 public static void registerCraftingRecipes() {
 		 addRecipe(new ItemStack(ModItems.tinBag, 1), "CCC", "CCC", "CCC", 'I', "ingotIron", 'S', "stickWood", 'C', ModItems.tinIngot);
 		 addRecipe(new ItemStack(ModTools.longSword, 1), " I ", " I ", "CS ", 'I', "ingotIron", 'S', "stickWood", 'C', ModItems.tinBag);
+		 addShapelessRecipe(new ItemStack(Items.PAPER, 5), Items.WHEAT, Items.WHEAT, Items.WHEAT, Items.WHEAT, Items.WHEAT);
 		 
 		 //RED
 		 addShapelessRecipe(new ItemStack(ModArmour.EuroditeHelmet, 1), Items.IRON_HELMET, Items.POTATO, Items.POTATO);
@@ -47,16 +48,16 @@ public class RecipeHandler {
 		 
 		 
 		 //Green + Paladin
-		 addShapelessRecipe(new ItemStack(ModArmour.EuroditeHelmetG1), Items.IRON_HELMET, Items.GHAST_TEAR);
-		 addShapelessRecipe(new ItemStack(ModArmour.EuroditeChestplateG1), Items.IRON_CHESTPLATE, Items.GHAST_TEAR);
+		 addShapelessRecipe(new ItemStack(ModArmour.EuroditeHelmetG1), Items.IRON_HELMET, Items.WRITTEN_BOOK);
+		 addShapelessRecipe(new ItemStack(ModArmour.EuroditeChestplateG1), Items.IRON_CHESTPLATE, Items.WRITTEN_BOOK);
 		 addShapelessRecipe(new ItemStack(ModArmour.EuroditeLeggingsG1), Items.IRON_LEGGINGS, "dyeGreen");
 		 //
-		 addShapelessRecipe(new ItemStack(ModArmour.EuroditeHelmetG2), Items.IRON_HELMET, Items.GHAST_TEAR, "ingotGold");
-		 addShapelessRecipe(new ItemStack(ModArmour.EuroditeChestplateG2), Items.IRON_CHESTPLATE, Items.GHAST_TEAR, "ingotGold");
+		 addShapelessRecipe(new ItemStack(ModArmour.EuroditeHelmetG2), Items.IRON_HELMET, Items.WRITTEN_BOOK, "ingotGold");
+		 addShapelessRecipe(new ItemStack(ModArmour.EuroditeChestplateG2), Items.IRON_CHESTPLATE, Items.WRITTEN_BOOK, "ingotGold");
 		 addShapelessRecipe(new ItemStack(ModArmour.EuroditeLeggingsG2), Items.IRON_LEGGINGS, "dyeGreen", "dyeGreen");
 		 //
-		 addShapelessRecipe(new ItemStack(ModArmour.EuroditeHelmetG3), Items.IRON_HELMET, Items.GHAST_TEAR, "ingotGold", "ingotGold");
-		 addShapelessRecipe(new ItemStack(ModArmour.EuroditeChestplateG3), Items.IRON_CHESTPLATE, Items.GHAST_TEAR, Items.GHAST_TEAR, "ingotGold", "ingotGold");
+		 addShapelessRecipe(new ItemStack(ModArmour.EuroditeHelmetG3), Items.IRON_HELMET, Items.WRITTEN_BOOK, "ingotGold", "ingotGold");
+		 addShapelessRecipe(new ItemStack(ModArmour.EuroditeChestplateG3), Items.IRON_CHESTPLATE, Items.WRITTEN_BOOK, Items.WRITTEN_BOOK, "ingotGold", "ingotGold");
 		 addShapelessRecipe(new ItemStack(ModArmour.EuroditeLeggingsG3), Items.IRON_LEGGINGS, "dyeGreen", "dyeGreen", "dyeGreen");
 
 
@@ -103,6 +104,76 @@ public class RecipeHandler {
 		 //
 		 addShapelessRecipe(new ItemStack(ModArmour.EuroditeHelmetCR4), Items.IRON_HELMET, Items.WRITTEN_BOOK, "ingotGold");
 		 addShapelessRecipe(new ItemStack(ModArmour.EuroditeLeggingsCR4), Items.IRON_LEGGINGS, "dyeRed", "dyeWhite", "dyeRed");
+
+
+		 //Sunjin Recipes
+		 //Black
+		 addShapelessRecipe(new ItemStack(ModArmour.SunjinHelmetSB1), Items.IRON_HELMET, Items.SPIDER_EYE, Items.ROTTEN_FLESH, Items.BONE, Items.SUGAR,"dyeBlack");
+		 addShapelessRecipe(new ItemStack(ModArmour.SunjinHelmetSB2), Items.IRON_HELMET, Items.SPIDER_EYE, Items.ROTTEN_FLESH, Items.BONE, Items.SUGAR, Items.SUGAR,"dyeBlack");
+		 addShapelessRecipe(new ItemStack(ModArmour.SunjinHelmetAB1),  Items.IRON_HELMET, Items.SUGAR,"dyeBlack");
+		 addShapelessRecipe(new ItemStack(ModArmour.SunjinChestplateSB1), Items.IRON_CHESTPLATE, Items.SPIDER_EYE, Items.ROTTEN_FLESH, Items.BONE, Items.SUGAR,"dyeBlack");
+		 addShapelessRecipe(new ItemStack(ModArmour.SunjinChestplateSB2), Items.IRON_CHESTPLATE, Items.SPIDER_EYE, Items.ROTTEN_FLESH, Items.BONE, Items.SUGAR, Items.SUGAR,"dyeBlack");
+		 addShapelessRecipe(new ItemStack(ModArmour.SunjinChestplateSB3), Items.IRON_CHESTPLATE, Items.SPIDER_EYE, Items.ROTTEN_FLESH, Items.BONE, Items.SUGAR, Items.SUGAR, Items.SUGAR, "dyeBlack");
+		 addShapelessRecipe(new ItemStack(ModArmour.SunjinChestplateAB1), Items.IRON_CHESTPLATE, Items.SUGAR,"dyeBlack");
+		 addShapelessRecipe(new ItemStack(ModArmour.SunjinLeggingsSB1), Items.IRON_LEGGINGS, Items.SUGAR, "dyeBlack");
+		 addShapelessRecipe(new ItemStack(ModArmour.SunjinBootsSB1), Items.IRON_BOOTS,Items.SPIDER_EYE, Items.ROTTEN_FLESH, Items.BONE,Items.SUGAR, "dyeBlack");
+		 //Blue
+		 addShapelessRecipe(new ItemStack(ModArmour.SunjinHelmetSBL1), Items.IRON_HELMET, Items.SPIDER_EYE, Items.ROTTEN_FLESH, Items.BONE,Items.SUGAR,"dyeBlue");
+		 addShapelessRecipe(new ItemStack(ModArmour.SunjinHelmetSBL2), Items.IRON_HELMET, Items.SPIDER_EYE, Items.ROTTEN_FLESH, Items.BONE,Items.SUGAR,Items.SUGAR, "dyeBlue");
+		 addShapelessRecipe(new ItemStack(ModArmour.SunjinHelmetABL1),  Items.IRON_HELMET, Items.SUGAR,"dyeBlue");
+		 addShapelessRecipe(new ItemStack(ModArmour.SunjinChestplateSBL1), Items.IRON_CHESTPLATE, Items.SPIDER_EYE, Items.ROTTEN_FLESH, Items.BONE,Items.SUGAR,"dyeBlue");
+		 addShapelessRecipe(new ItemStack(ModArmour.SunjinChestplateSBL2), Items.IRON_CHESTPLATE, Items.SPIDER_EYE, Items.ROTTEN_FLESH, Items.BONE,Items.SUGAR,Items.SUGAR, "dyeBlue");
+		 addShapelessRecipe(new ItemStack(ModArmour.SunjinChestplateSBL3), Items.IRON_CHESTPLATE, Items.SPIDER_EYE, Items.ROTTEN_FLESH, Items.BONE,Items.SUGAR,Items.SUGAR,Items.SUGAR, "dyeBlue");
+		 addShapelessRecipe(new ItemStack(ModArmour.SunjinChestplateABL1), Items.IRON_CHESTPLATE, Items.SUGAR,"dyeBlue");
+		 addShapelessRecipe(new ItemStack(ModArmour.SunjinLeggingsSBL1), Items.IRON_LEGGINGS, Items.SUGAR, "dyeBlue");
+		 addShapelessRecipe(new ItemStack(ModArmour.SunjinBootsSBL1), Items.IRON_BOOTS,Items.SPIDER_EYE, Items.ROTTEN_FLESH, Items.BONE,Items.SUGAR, "dyeBlue");
+		 //Green
+		 addShapelessRecipe(new ItemStack(ModArmour.SunjinHelmetSG1), Items.IRON_HELMET, Items.SPIDER_EYE, Items.ROTTEN_FLESH, Items.BONE,Items.SUGAR,"dyeGreen");
+		 addShapelessRecipe(new ItemStack(ModArmour.SunjinHelmetSG2), Items.IRON_HELMET, Items.SPIDER_EYE, Items.ROTTEN_FLESH, Items.BONE,Items.SUGAR,Items.SUGAR, "dyeGreen");
+		 addShapelessRecipe(new ItemStack(ModArmour.SunjinHelmetAG1),  Items.IRON_HELMET, Items.SUGAR,"dyeGreen");
+		 addShapelessRecipe(new ItemStack(ModArmour.SunjinChestplateSG1), Items.IRON_CHESTPLATE, Items.SPIDER_EYE, Items.ROTTEN_FLESH, Items.BONE,Items.SUGAR,"dyeGreen");
+		 addShapelessRecipe(new ItemStack(ModArmour.SunjinChestplateSG2), Items.IRON_CHESTPLATE, Items.SPIDER_EYE, Items.ROTTEN_FLESH, Items.BONE,Items.SUGAR,Items.SUGAR, "dyeGreen");
+		 addShapelessRecipe(new ItemStack(ModArmour.SunjinChestplateSG3), Items.IRON_CHESTPLATE, Items.SPIDER_EYE, Items.ROTTEN_FLESH, Items.BONE,Items.SUGAR,Items.SUGAR,Items.SUGAR, "dyeGreen");
+		 addShapelessRecipe(new ItemStack(ModArmour.SunjinChestplateAG1), Items.IRON_CHESTPLATE, Items.SUGAR,"dyeGreen");
+		 addShapelessRecipe(new ItemStack(ModArmour.SunjinLeggingsSG1), Items.IRON_LEGGINGS, Items.SUGAR, "dyeGreen");
+		 addShapelessRecipe(new ItemStack(ModArmour.SunjinBootsSG1), Items.IRON_BOOTS,Items.SPIDER_EYE, Items.ROTTEN_FLESH, Items.BONE,Items.SUGAR, "dyeGreen");
+		 //Red
+		 addShapelessRecipe(new ItemStack(ModArmour.SunjinHelmetSR1), Items.IRON_HELMET, Items.SPIDER_EYE, Items.ROTTEN_FLESH, Items.BONE,Items.SUGAR,"dyeRed");
+		 addShapelessRecipe(new ItemStack(ModArmour.SunjinHelmetSR2), Items.IRON_HELMET, Items.SPIDER_EYE, Items.ROTTEN_FLESH, Items.BONE,Items.SUGAR,Items.SUGAR, "dyeRed");
+		 addShapelessRecipe(new ItemStack(ModArmour.SunjinHelmetAR1),  Items.IRON_HELMET, Items.SUGAR,"dyeRed");
+		 addShapelessRecipe(new ItemStack(ModArmour.SunjinChestplateSR1), Items.IRON_CHESTPLATE, Items.SPIDER_EYE, Items.ROTTEN_FLESH, Items.BONE,Items.SUGAR,"dyeRed");
+		 addShapelessRecipe(new ItemStack(ModArmour.SunjinChestplateSR2), Items.IRON_CHESTPLATE, Items.SPIDER_EYE, Items.ROTTEN_FLESH, Items.BONE,Items.SUGAR,Items.SUGAR, "dyeRed");
+		 addShapelessRecipe(new ItemStack(ModArmour.SunjinChestplateSR3), Items.IRON_CHESTPLATE, Items.SPIDER_EYE, Items.ROTTEN_FLESH, Items.BONE,Items.SUGAR,Items.SUGAR,Items.SUGAR, "dyeRed");
+		 addShapelessRecipe(new ItemStack(ModArmour.SunjinChestplateAR1), Items.IRON_CHESTPLATE, Items.SUGAR,"dyeRed");
+		 addShapelessRecipe(new ItemStack(ModArmour.SunjinLeggingsSR1), Items.IRON_LEGGINGS, Items.SUGAR, "dyeRed");
+		 addShapelessRecipe(new ItemStack(ModArmour.SunjinBootsSR1), Items.IRON_BOOTS,Items.SPIDER_EYE, Items.ROTTEN_FLESH, Items.BONE,Items.SUGAR, "dyeRed");
+		 //White
+		 addShapelessRecipe(new ItemStack(ModArmour.SunjinHelmetSW1), Items.IRON_HELMET, Items.SPIDER_EYE, Items.ROTTEN_FLESH, Items.BONE,Items.SUGAR,"dyeWhite");
+		 addShapelessRecipe(new ItemStack(ModArmour.SunjinHelmetSW2), Items.IRON_HELMET, Items.SPIDER_EYE, Items.ROTTEN_FLESH, Items.BONE,Items.SUGAR,Items.SUGAR, "dyeWhite");
+		 addShapelessRecipe(new ItemStack(ModArmour.SunjinHelmetAW1),  Items.IRON_HELMET, Items.SUGAR,"dyeWhite");
+		 addShapelessRecipe(new ItemStack(ModArmour.SunjinChestplateSW1), Items.IRON_CHESTPLATE, Items.SPIDER_EYE, Items.ROTTEN_FLESH, Items.BONE,Items.SUGAR,"dyeWhite");
+		 addShapelessRecipe(new ItemStack(ModArmour.SunjinChestplateSW2), Items.IRON_CHESTPLATE, Items.SPIDER_EYE, Items.ROTTEN_FLESH, Items.BONE,Items.SUGAR,Items.SUGAR, "dyeWhite");
+		 addShapelessRecipe(new ItemStack(ModArmour.SunjinChestplateSW3), Items.IRON_CHESTPLATE, Items.SPIDER_EYE, Items.ROTTEN_FLESH, Items.BONE,Items.SUGAR,Items.SUGAR,Items.SUGAR, "dyeWhite");
+		 addShapelessRecipe(new ItemStack(ModArmour.SunjinChestplateAW1), Items.IRON_CHESTPLATE, Items.SUGAR,"dyeWhite");
+		 addShapelessRecipe(new ItemStack(ModArmour.SunjinLeggingsSW1), Items.IRON_LEGGINGS, Items.SUGAR, "dyeWhite");
+		 addShapelessRecipe(new ItemStack(ModArmour.SunjinBootsSW1), Items.IRON_BOOTS,Items.SPIDER_EYE, Items.ROTTEN_FLESH, Items.BONE,Items.SUGAR, "dyeWhite");
+		 //Cyan Yellow Orange Purple
+		 addShapelessRecipe(new ItemStack(ModArmour.SunjinHelmetAC1),  Items.IRON_HELMET, Items.SUGAR,"dyeCyan");
+		 addShapelessRecipe(new ItemStack(ModArmour.SunjinChestplateAC1), Items.IRON_CHESTPLATE, Items.SUGAR,"dyeCyan");
+		 addShapelessRecipe(new ItemStack(ModArmour.SunjinLeggingsSC1), Items.IRON_LEGGINGS, Items.SUGAR, "dyeCyan");
+		 addShapelessRecipe(new ItemStack(ModArmour.SunjinHelmetAY1),  Items.IRON_HELMET, Items.SUGAR,"dyeYellow");
+		 addShapelessRecipe(new ItemStack(ModArmour.SunjinChestplateAY1), Items.IRON_CHESTPLATE, Items.SUGAR,"dyeYellow");
+		 addShapelessRecipe(new ItemStack(ModArmour.SunjinLeggingsSY1), Items.IRON_LEGGINGS, Items.SUGAR, "dyeYellow");
+		 addShapelessRecipe(new ItemStack(ModArmour.SunjinHelmetAO1),  Items.IRON_HELMET, Items.SUGAR,"dyeOrange");
+		 addShapelessRecipe(new ItemStack(ModArmour.SunjinChestplateAO1), Items.IRON_CHESTPLATE, Items.SUGAR,"dyeOrange");
+		 addShapelessRecipe(new ItemStack(ModArmour.SunjinLeggingsSO1), Items.IRON_LEGGINGS, Items.SUGAR, "dyeOrange");
+		 addShapelessRecipe(new ItemStack(ModArmour.SunjinHelmetAP1),  Items.IRON_HELMET, Items.SUGAR,"dyePurple");
+		 addShapelessRecipe(new ItemStack(ModArmour.SunjinChestplateAP1), Items.IRON_CHESTPLATE, Items.SUGAR,"dyePurple");
+		 addShapelessRecipe(new ItemStack(ModArmour.SunjinLeggingsSP1), Items.IRON_LEGGINGS, Items.SUGAR, "dyePurple");
+
+		 addShapelessRecipe(new ItemStack(ModArmour.SunjinHelmetANA1),  Items.STRING, Items.SUGAR);
+
+
 	}
 	 
 	public static void addRecipe(ItemStack output, Object... args){
