@@ -149,5 +149,20 @@ item.yukatasy_1.name=Yellow Yukata
 item.yukataso_1.name=Orange Yukata
 item.yukatasp_1.name=Purple Yukata
 
+item.helmsig_1.name=Black Legionnaire Helmet
+item.chestsig_1.name=Black Legionnaire Chestplate
+item.tunicsigr_1.name=Red Legionnaire Tunic
+
+item.helmsig_2.name=Legionnaire Helmet
+item.chestsig_2.name=Legionnaire Chestplate
+item.tunicsigr_2.name=Red Legionnaire Chainmail
+
+item.helmsig_3.name=Bronze Legionnaire Helmet
+item.chestsig_3.name=Bronze Legionnaire Pauldrons
+item.tunicsigb_1.name=Blue Legionnaire Tunic
+item.tunicsigb_2.name=Blue Legionnaire Chainmail
+
+item.tunicsigg_1.name=Green Legionnaire Tunic
+item.tunicsigg_2.name=Green Legionnaire Chainmail
 
 item.helmet_bu1.name=Bucket Helmet

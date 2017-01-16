@@ -86,6 +86,17 @@ public class ModArmour {
 	public static ArmorMaterial samuraiO1Material = EnumHelper.addArmorMaterial("samuraio1", Reference.MODID + ":samuraio1", 15, new int[] {3,8,6,3}, 10, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 2.0F);
 	public static ArmorMaterial samuraiP1Material = EnumHelper.addArmorMaterial("samuraip1", Reference.MODID + ":samuraip1", 15, new int[] {3,8,6,3}, 10, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 2.0F);
 
+	//Sigma
+	//Red + Armours
+	public static ArmorMaterial sigmaR1Material = EnumHelper.addArmorMaterial("sigmar1", Reference.MODID + ":sigmar1", 15, new int[] {3,8,6,3}, 10, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 2.0F);
+	public static ArmorMaterial sigmaR2Material = EnumHelper.addArmorMaterial("sigmar2", Reference.MODID + ":sigmar2", 15, new int[] {3,8,6,3}, 10, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 2.0F);
+	//Blue + Bronze Armour
+	public static ArmorMaterial sigmaB1Material = EnumHelper.addArmorMaterial("sigmab1", Reference.MODID + ":sigmab1", 15, new int[] {3,8,6,3}, 10, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 2.0F);
+	public static ArmorMaterial sigmaB2Material = EnumHelper.addArmorMaterial("sigmab2", Reference.MODID + ":sigmab2", 15, new int[] {3,8,6,3}, 10, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 2.0F);
+	//Green
+	public static ArmorMaterial sigmaG1Material = EnumHelper.addArmorMaterial("sigmag1", Reference.MODID + ":sigmag1", 15, new int[] {3,8,6,3}, 10, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 2.0F);
+	public static ArmorMaterial sigmaG2Material = EnumHelper.addArmorMaterial("sigmag2", Reference.MODID + ":sigmag2", 15, new int[] {3,8,6,3}, 10, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 2.0F);
+
 	//RED
 	public static ItemArmor EuroditeHelmet;
 	public static ItemArmor EuroditeChestplate;
@@ -247,6 +258,24 @@ public class ModArmour {
 	public static ItemArmor SunjinLeggingsSY1;
 	public static ItemArmor SunjinLeggingsSO1;
 	public static ItemArmor SunjinLeggingsSP1;
+
+	//Sigma
+	//Red + Armour
+	public static ItemArmor SigmaHelmetR1;
+	public static ItemArmor SigmaChestplateR1;
+	public static ItemArmor SigmaLeggingsR1;
+	public static ItemArmor SigmaHelmetR2;
+	public static ItemArmor SigmaChestplateR2;
+	public static ItemArmor SigmaLeggingsR2;
+	//Blue + Armour Bronze
+	public static ItemArmor SigmaHelmetB1;
+	public static ItemArmor SigmaChestplateB1;
+	public static ItemArmor SigmaLeggingsB1;
+	public static ItemArmor SigmaLeggingsB2;
+	//Green
+	public static ItemArmor SigmaLeggingsG1;
+	public static ItemArmor SigmaLeggingsG2;
+
 
 
 	public static void init() {
@@ -411,6 +440,23 @@ public class ModArmour {
 		SunjinLeggingsSY1 = new ItemModArmour(samuraiY1Material, 2, EntityEquipmentSlot.LEGS, "yukatasy_1");
 		SunjinLeggingsSO1 = new ItemModArmour(samuraiO1Material, 2, EntityEquipmentSlot.LEGS, "yukataso_1");
 		SunjinLeggingsSP1 = new ItemModArmour(samuraiP1Material, 2, EntityEquipmentSlot.LEGS, "yukatasp_1");
+
+		//Sigma
+		//Red + Armour
+		SigmaHelmetR1 = new ItemModArmour(sigmaR1Material, 1, EntityEquipmentSlot.HEAD, "helmsig_1");
+		SigmaChestplateR1 = new ItemModArmour(sigmaR1Material, 1, EntityEquipmentSlot.CHEST, "chestsig_1");
+		SigmaLeggingsR1 = new ItemModArmour(sigmaR1Material, 2, EntityEquipmentSlot.LEGS, "tunicsigr_1");
+		SigmaHelmetR2 = new ItemModArmour(sigmaR2Material, 1, EntityEquipmentSlot.HEAD, "helmsig_2");
+		SigmaChestplateR2 = new ItemModArmour(sigmaR2Material, 1, EntityEquipmentSlot.CHEST, "chestsig_2");
+		SigmaLeggingsR2 = new ItemModArmour(sigmaR2Material, 2, EntityEquipmentSlot.LEGS, "tunicsigr_2");
+		//Blue+ Bronze
+		SigmaHelmetB1 = new ItemModArmour(sigmaB1Material, 1, EntityEquipmentSlot.HEAD, "helmsig_3");
+		SigmaChestplateB1 = new ItemModArmour(sigmaB1Material, 1, EntityEquipmentSlot.CHEST, "chestsig_3");
+		SigmaLeggingsB1 = new ItemModArmour(sigmaB1Material, 2, EntityEquipmentSlot.LEGS, "tunicsigb_1");
+		SigmaLeggingsB2 = new ItemModArmour(sigmaB2Material, 2, EntityEquipmentSlot.LEGS, "tunicsigb_2");
+		//Green
+		SigmaLeggingsG1 = new ItemModArmour(sigmaG1Material, 2, EntityEquipmentSlot.LEGS, "tunicsigg_1");
+		SigmaLeggingsG2 = new ItemModArmour(sigmaG2Material, 2, EntityEquipmentSlot.LEGS, "tunicsigg_2");
 
 		//3d Items
         EuroditeHelmetBU1 = new ItemModArmour(euroditeBU1Material, 1, EntityEquipmentSlot.HEAD, "helmet_bu1");
@@ -589,6 +635,22 @@ public class ModArmour {
 		registerItem(SunjinLeggingsSO1);
 		registerItem(SunjinLeggingsSP1);
 
+		//Sigma
+		//Red + Armours
+		registerItem(SigmaHelmetR1);
+		registerItem(SigmaChestplateR1);
+		registerItem(SigmaLeggingsR1);
+		registerItem(SigmaHelmetR2);
+		registerItem(SigmaChestplateR2);
+		registerItem(SigmaLeggingsR2);
+		//Blue+ Bronze
+		registerItem(SigmaHelmetB1);
+		registerItem(SigmaChestplateB1);
+		registerItem(SigmaLeggingsB1);
+		registerItem(SigmaLeggingsB2);
+		//Green
+		registerItem(SigmaLeggingsG1);
+		registerItem(SigmaLeggingsG2);
 		//3d Items
         //Bucket
 		registerItem(EuroditeHelmetBU1);
@@ -766,6 +828,23 @@ public class ModArmour {
 		registerRender(SunjinLeggingsSY1);
 		registerRender(SunjinLeggingsSO1);
 		registerRender(SunjinLeggingsSP1);
+
+		//Sigma
+		//Red + Armours
+		registerRender(SigmaHelmetR1);
+		registerRender(SigmaChestplateR1);
+		registerRender(SigmaLeggingsR1);
+		registerRender(SigmaHelmetR2);
+		registerRender(SigmaChestplateR2);
+		registerRender(SigmaLeggingsR2);
+		//Blue+ Bronze
+		registerRender(SigmaHelmetB1);
+		registerRender(SigmaChestplateB1);
+		registerRender(SigmaLeggingsB1);
+		registerRender(SigmaLeggingsB2);
+		//Green
+		registerRender(SigmaLeggingsG1);
+		registerRender(SigmaLeggingsG2);
 
 		//3d Items
         registerRender(EuroditeHelmetBU1);
