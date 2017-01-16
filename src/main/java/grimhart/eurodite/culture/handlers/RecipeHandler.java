@@ -174,6 +174,24 @@ public class RecipeHandler {
 		 addShapelessRecipe(new ItemStack(ModArmour.SunjinHelmetANA1),  Items.STRING, Items.SUGAR);
 
 
+		 //Sigma
+		 //Red
+		 addShapelessRecipe(new ItemStack(ModArmour.SigmaHelmetR1, 1), Items.IRON_HELMET, Items.APPLE);
+		 addShapelessRecipe(new ItemStack(ModArmour.SigmaChestplateR1, 1), Items.IRON_CHESTPLATE,  Items.APPLE);
+		 addShapelessRecipe(new ItemStack(ModArmour.SigmaLeggingsR1, 1), Items.IRON_LEGGINGS,  Items.APPLE,  "dyeRed");
+		 addShapelessRecipe(new ItemStack(ModArmour.SigmaHelmetR2, 1), Items.IRON_HELMET, Items.APPLE,Items.APPLE);
+		 addShapelessRecipe(new ItemStack(ModArmour.SigmaChestplateR2, 1), Items.IRON_CHESTPLATE,  Items.APPLE,  Items.APPLE);
+		 addShapelessRecipe(new ItemStack(ModArmour.SigmaLeggingsR2, 1), Items.IRON_LEGGINGS,  Items.APPLE,  "dyeRed","dyeRed");
+		 //Blue
+		 addShapelessRecipe(new ItemStack(ModArmour.SigmaHelmetB1, 1), Items.IRON_HELMET, Items.APPLE,Items.APPLE,Items.APPLE);
+		 addShapelessRecipe(new ItemStack(ModArmour.SigmaChestplateB1, 1), Items.IRON_CHESTPLATE,  Items.APPLE, Items.APPLE,Items.APPLE);
+		 addShapelessRecipe(new ItemStack(ModArmour.SigmaLeggingsB1, 1), Items.IRON_LEGGINGS,  Items.APPLE,  "dyeBlue");
+		 addShapelessRecipe(new ItemStack(ModArmour.SigmaLeggingsB2, 1), Items.IRON_LEGGINGS,  Items.APPLE,  "dyeBlue","dyeBlue");
+		 //Green
+		 addShapelessRecipe(new ItemStack(ModArmour.SigmaLeggingsG1, 1), Items.IRON_LEGGINGS,  Items.APPLE,  "dyeGreen");
+		 addShapelessRecipe(new ItemStack(ModArmour.SigmaLeggingsG2, 1), Items.IRON_LEGGINGS,  Items.APPLE,  "dyeGreen","dyeGreen");
+
+
 	}
 	 
 	public static void addRecipe(ItemStack output, Object... args){
