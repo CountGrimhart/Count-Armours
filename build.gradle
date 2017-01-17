@@ -32,7 +32,7 @@ repositories {
 }
 
 dependencies {
-    compile "the_fireplace.overlord:Overlord:7.0.0:deobf"
+    //compile "the_fireplace.overlord:Overlord:7.0.0:deobf"
 }
 
 processResources

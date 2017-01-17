@@ -42,16 +42,16 @@ item.tunic_cr3.name=Sayo de Extranjeros
 item.helmet_cr4.name=Gold Heaume
 item.tunic_cr4.name=Sayo de Extranjeros
 
-item.helmet_g1.name=Paladín Covered Barbute
-item.chest_g1.name=Paladín Pauldrons
+item.helmet_g1.name=Paladin Covered Barbute
+item.chest_g1.name=Paladin Pauldrons
 item.tunic_g1.name=Sayo de Verde
 
-item.helmet_g2.name=Paladín Armet
-item.chest_g2.name=Paladín Breastplate
+item.helmet_g2.name=Paladin Armet
+item.chest_g2.name=Paladin Breastplate
 item.tunic_g2.name=Sayo de Sol Verde
 
-item.helmet_g3.name=Barbute de Paladín
-item.chest_g3.name=Placas de Paladín
+item.helmet_g3.name=Barbute de Paladin
+item.chest_g3.name=Placas de Paladin
 item.tunic_g3.name=Sayo de Creeper
 
 item.helmet_p1.name=Salade de Cenizas

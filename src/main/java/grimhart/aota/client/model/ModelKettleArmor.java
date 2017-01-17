@@ -6,10 +6,10 @@ import net.minecraft.entity.Entity;
 
 public class ModelKettleArmor extends ModelBiped
 {
-    ModelRenderer hatpart1;
-    ModelRenderer hatpart2;
-    ModelRenderer hatpart3;
-    ModelRenderer hatpart4;
+    private ModelRenderer hatpart1;
+    private ModelRenderer hatpart2;
+    private ModelRenderer hatpart3;
+    private ModelRenderer hatpart4;
 
     public ModelKettleArmor(float scale) {
         super(scale, 0, 64, 64);
@@ -45,7 +45,7 @@ public class ModelKettleArmor extends ModelBiped
         bipedHead.addChild(hatpart4);
     }
 
-    @Override
+
     public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5)
     {
         super.render(entity, f, f1, f2, f3, f4, f5);

@@ -8,7 +8,5 @@ public class CommonProxy {
 		
 	}
 
-	public ModelBiped getArmorModel(int id){
-		return null;
-	}
+	public ModelBiped getArmorModel(int id){return null;}
 }
