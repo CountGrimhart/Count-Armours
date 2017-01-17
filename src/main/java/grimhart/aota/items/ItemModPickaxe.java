@@ -1,6 +1,6 @@
-package grimhart.eurodite.culture.items;
+package grimhart.aota.items;
 
-import grimhart.eurodite.culture.Reference;
+import grimhart.aota.Reference;
 import net.minecraft.item.ItemPickaxe;
 import net.minecraft.util.ResourceLocation;
 

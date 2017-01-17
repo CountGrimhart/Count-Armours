@@ -1,4 +1,4 @@
-package grimhart.eurodite.culture.client.model;
+package grimhart.aota.client.model;
 
 import net.minecraft.client.model.ModelBiped;
 import net.minecraft.client.model.ModelRenderer;

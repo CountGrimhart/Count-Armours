@@ -1,8 +1,8 @@
-package grimhart.eurodite.culture.handlers;
+package grimhart.aota.handlers;
 
-import grimhart.eurodite.culture.init.ModArmour;
-import grimhart.eurodite.culture.init.ModItems;
-import grimhart.eurodite.culture.init.ModTools;
+import grimhart.aota.init.ModTools;
+import grimhart.aota.init.ModArmour;
+import grimhart.aota.init.ModItems;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.common.registry.GameRegistry;

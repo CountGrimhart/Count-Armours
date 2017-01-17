@@ -1,8 +1,7 @@
-package grimhart.eurodite.culture;
+package grimhart.aota;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import grimhart.eurodite.culture.Reference;
 
 public class Utils {
 

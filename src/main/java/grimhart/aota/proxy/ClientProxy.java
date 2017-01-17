@@ -1,9 +1,9 @@
-package grimhart.eurodite.culture.proxy;
+package grimhart.aota.proxy;
 
-import grimhart.eurodite.culture.client.model.ModelKettleArmor;
-import grimhart.eurodite.culture.init.ModArmour;
-import grimhart.eurodite.culture.init.ModItems;
-import grimhart.eurodite.culture.init.ModTools;
+import grimhart.aota.init.ModTools;
+import grimhart.aota.client.model.ModelKettleArmor;
+import grimhart.aota.init.ModArmour;
+import grimhart.aota.init.ModItems;
 import net.minecraft.client.model.ModelBiped;
 
 public class ClientProxy extends CommonProxy {

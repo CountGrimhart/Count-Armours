@@ -1,10 +1,10 @@
-package grimhart.eurodite.culture;
+package grimhart.aota;
 
-import grimhart.eurodite.culture.handlers.RecipeHandler;
-import grimhart.eurodite.culture.init.ModArmour;
-import grimhart.eurodite.culture.init.ModItems;
-import grimhart.eurodite.culture.init.ModTools;
-import grimhart.eurodite.culture.proxy.CommonProxy;
+import grimhart.aota.init.ModTools;
+import grimhart.aota.handlers.RecipeHandler;
+import grimhart.aota.init.ModArmour;
+import grimhart.aota.init.ModItems;
+import grimhart.aota.proxy.CommonProxy;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.common.Mod;
@@ -16,17 +16,15 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 
 import javax.annotation.Nonnull;
 
-import static grimhart.eurodite.culture.Reference.MODID;
-
-@Mod(modid = MODID, name = Reference.NAME, version = Reference.VERSION)
-public class EuroditeCulture {
-	@Mod.Instance(MODID)
-	public static EuroditeCulture instance;
+@Mod(modid = Reference.MODID, name = Reference.NAME)
+public class AOTA {
+	@Mod.Instance(Reference.MODID)
+	public static AOTA instance;
 	
 	@SidedProxy(serverSide = Reference.SERVER_PROXY_CLASS, clientSide = Reference.CLIENT_PROXY_CLASS)
 	public static CommonProxy proxy;
 
-	public static final CreativeTabs tabEurodite = new CreativeTabs(MODID+"_eurodite") {
+	public static final CreativeTabs tabEurodite = new CreativeTabs(Reference.MODID+"_eurodite") {
 		@Nonnull
 		@Override
 		public ItemStack getTabIconItem() {

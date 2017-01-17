@@ -1,7 +1,7 @@
-package grimhart.eurodite.culture.init;
+package grimhart.aota.init;
 
-import grimhart.eurodite.culture.Reference;
-import grimhart.eurodite.culture.items.ItemTinIngot;
+import grimhart.aota.Reference;
+import grimhart.aota.items.ItemTinIngot;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
 import net.minecraft.util.ResourceLocation;

@@ -1,7 +1,7 @@
-package grimhart.eurodite.culture.init;
+package grimhart.aota.init;
 
-import grimhart.eurodite.culture.Reference;
-import grimhart.eurodite.culture.items.ItemModArmour;
+import grimhart.aota.Reference;
+import grimhart.aota.items.ItemModArmour;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.init.SoundEvents;
 import net.minecraft.inventory.EntityEquipmentSlot;

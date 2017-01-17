@@ -1,7 +1,7 @@
 [
 {
-"modid": "eurodite",
-"name": "Eurodite Culture Pack",
+"modid": "aota",
+"name": "Armory of the Ancients",
 "description": "Lots and lots of armours!",
 "version": "${version}",
 "credits": "Created by Count_Grimhart and The_Fireplace",
@@ -12,8 +12,6 @@
 "authors": [ "Count Grimhart", "The_Fireplace" ],
 "parent":"",
 "screenshots": [],
-"dependencies": [
-"mod_MinecraftForge"
-]
+"dependencies": []
 }
 ]

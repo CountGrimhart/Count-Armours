@@ -1,4 +1,4 @@
-package grimhart.eurodite.culture.proxy;
+package grimhart.aota.proxy;
 
 import net.minecraft.client.model.ModelBiped;
 

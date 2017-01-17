@@ -1,4 +1,4 @@
-package grimhart.eurodite.culture.items;
+package grimhart.aota.items;
 
 import net.minecraft.item.Item;
 

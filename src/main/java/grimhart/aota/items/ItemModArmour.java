@@ -1,8 +1,8 @@
-package grimhart.eurodite.culture.items;
+package grimhart.aota.items;
 
-import grimhart.eurodite.culture.EuroditeCulture;
-import grimhart.eurodite.culture.Reference;
-import grimhart.eurodite.culture.init.ModArmour;
+import grimhart.aota.AOTA;
+import grimhart.aota.Reference;
+import grimhart.aota.init.ModArmour;
 import net.minecraft.client.model.ModelBiped;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.inventory.EntityEquipmentSlot;
@@ -18,7 +18,7 @@ public class ItemModArmour extends ItemArmor{
 		super(materialIn, renderIndexIn, equipmentSlotIn);
 		this.setUnlocalizedName(unlocalizedName);
 		this.setRegistryName(new ResourceLocation(Reference.MODID, unlocalizedName));
-		this.setCreativeTab(EuroditeCulture.tabEurodite);
+		this.setCreativeTab(AOTA.tabEurodite);
 	}
 
 	@Override
@@ -27,7 +27,7 @@ public class ItemModArmour extends ItemArmor{
 		if (!stack.isEmpty()) {
 			ModelBiped armorModel = null;
 			if (stack.getItem() == ModArmour.EuroditeHelmetBU1) {
-				armorModel = EuroditeCulture.proxy.getArmorModel(0);
+				armorModel = AOTA.proxy.getArmorModel(0);
 			}
 
 			if(armorModel != null){
