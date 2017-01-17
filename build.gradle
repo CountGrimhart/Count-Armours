@@ -10,12 +10,12 @@ buildscript {
 apply plugin: 'net.minecraftforge.gradle.forge'
 
 version = "1.0.0"
-group= "grimhart.eurodite.culture"
-archivesBaseName = "eurodite"
+group= "grimhart.aota"
+archivesBaseName = "AOTA-1.11"
 
-sourceCompatibility = targetCompatibility = "1.6"
+sourceCompatibility = targetCompatibility = "1.8"
 compileJava {
-    sourceCompatibility = targetCompatibility = "1.6"
+    sourceCompatibility = targetCompatibility = "1.8"
 }
 
 minecraft {
