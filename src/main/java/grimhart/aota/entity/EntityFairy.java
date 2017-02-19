@@ -12,11 +12,9 @@ import net.minecraft.entity.effect.EntityLightningBolt;
 import net.minecraft.entity.item.EntityXPOrb;
 import net.minecraft.entity.monster.*;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.init.MobEffects;
 import net.minecraft.init.SoundEvents;
-import net.minecraft.item.EnumDyeColor;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemMap;
 import net.minecraft.item.ItemStack;
@@ -500,7 +498,7 @@ public class EntityFairy extends EntityCreature implements IMerchant, INpc {
                 i = this.price.getPrice(p_190888_3_);
             }
 
-            p_190888_2_.add(new MerchantRecipe(new ItemStack(this.buyingItem, i, 0), ModItems.tinBag));
+            p_190888_2_.add(new MerchantRecipe(new ItemStack(this.buyingItem, i, 0), ModItems.tokenBag));
         }
     }
 

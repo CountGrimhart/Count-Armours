@@ -1,7 +1,7 @@
 package grimhart.aota.init;
 
 import grimhart.aota.Reference;
-import grimhart.aota.items.ItemTinIngot;
+import grimhart.aota.items.ItemGeneric;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
 import net.minecraft.util.ResourceLocation;
@@ -12,21 +12,21 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class ModItems {
 	
-	public static Item tinIngot;
-	public static Item tinBag;
+	public static Item trading_token;
+	public static Item tokenBag;
 	
 	public static void init() {
-		tinIngot = new ItemTinIngot("tin_ingot");
-		tinBag = new ItemTinIngot("bag_ingot");
+		trading_token = new ItemGeneric("trading_token");
+		tokenBag = new ItemGeneric("bag_ingot");
 	}
 	public static void register() {
-		registerItem(tinIngot);
-		registerItem(tinBag);
+		registerItem(trading_token);
+		registerItem(tokenBag);
 	}
 	@SideOnly(Side.CLIENT)
 	public static void registerRenders() {
-		registerRender(tinIngot);
-		registerRender(tinBag);
+		registerRender(trading_token);
+		registerRender(tokenBag);
 	}
 	public static void registerItem(Item item) {
 		GameRegistry.register(item);
