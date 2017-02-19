@@ -1,6 +1,6 @@
 {	
 	"parent": "item/generated",
 	"textures": {
-		"layer0": "eurodite:items/tunic_p3"
+		"layer0": "aota:items/tunic_p3"
 	}
 }

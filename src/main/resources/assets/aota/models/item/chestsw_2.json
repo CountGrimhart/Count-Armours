@@ -1,6 +1,6 @@
 {	
 	"parent": "item/generated",
 	"textures": {
-		"layer0": "eurodite:items/chestsw_2"
+		"layer0": "aota:items/chestsw_2"
 	}
 }

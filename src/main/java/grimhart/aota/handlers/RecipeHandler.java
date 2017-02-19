@@ -12,8 +12,8 @@ import net.minecraftforge.oredict.ShapelessOreRecipe;
 public class RecipeHandler {
 
 	 public static void registerCraftingRecipes() {
-		 addRecipe(new ItemStack(ModItems.tokenBag, 1), "CCC", "CCC", "CCC", 'I', "ingotIron", 'S', "stickWood", 'C', ModItems.trading_token);
-		 addRecipe(new ItemStack(ModTools.longSword, 1), " I ", " I ", "CS ", 'I', "ingotIron", 'S', "stickWood", 'C', ModItems.tokenBag);
+		 addRecipe(new ItemStack(ModItems.token_bag, 1), "CCC", "CCC", "CCC", 'I', "ingotIron", 'S', "stickWood", 'C', ModItems.trading_token);
+		 addRecipe(new ItemStack(ModTools.longSword, 1), " I ", " I ", "CS ", 'I', "ingotIron", 'S', "stickWood", 'C', ModItems.token_bag);
 		 addShapelessRecipe(new ItemStack(Items.PAPER, 5), Items.WHEAT, Items.WHEAT, Items.WHEAT, Items.WHEAT, Items.WHEAT);
 		 
 		 //RED
@@ -200,9 +200,5 @@ public class RecipeHandler {
 
 	public static void addShapelessRecipe(ItemStack output, Object... args){
 		GameRegistry.addRecipe(new ShapelessOreRecipe(output, args));
-	}
-	
-	public static void registerSmeltingRecipes() {
-		
 	}
 }

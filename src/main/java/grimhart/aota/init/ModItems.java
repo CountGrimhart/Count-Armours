@@ -13,20 +13,20 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 public class ModItems {
 	
 	public static Item trading_token;
-	public static Item tokenBag;
+	public static Item token_bag;
 	
 	public static void init() {
 		trading_token = new ItemGeneric("trading_token");
-		tokenBag = new ItemGeneric("bag_ingot");
+		token_bag = new ItemGeneric("token_bag");
 	}
 	public static void register() {
 		registerItem(trading_token);
-		registerItem(tokenBag);
+		registerItem(token_bag);
 	}
 	@SideOnly(Side.CLIENT)
 	public static void registerRenders() {
 		registerRender(trading_token);
-		registerRender(tokenBag);
+		registerRender(token_bag);
 	}
 	public static void registerItem(Item item) {
 		GameRegistry.register(item);

@@ -1,6 +1,6 @@
 {	
 	"parent": "item/generated",
 	"textures": {
-		"layer0": "eurodite:items/tin_ingot"
+		"layer0": "aota:items/token_bag"
 	}
 }

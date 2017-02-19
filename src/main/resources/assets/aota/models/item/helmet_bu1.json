@@ -1,6 +1,6 @@
 {	
 	"parent": "item/generated",
 	"textures": {
-		"layer0": "eurodite:items/helmet_bu1"
+		"layer0": "aota:items/helmet_bu1"
 	}
 }
