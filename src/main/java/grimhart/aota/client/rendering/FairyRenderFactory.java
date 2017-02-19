@@ -11,6 +11,6 @@ import net.minecraftforge.fml.client.registry.IRenderFactory;
 public class FairyRenderFactory implements IRenderFactory<EntityFairy> {
     @Override
     public Render<? super EntityFairy> createRenderFor(RenderManager manager) {
-        return null;
+        return new RenderFairy(manager);
     }
 }

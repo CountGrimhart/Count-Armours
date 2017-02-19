@@ -3,6 +3,9 @@ package grimhart.aota.entity;
 import grimhart.aota.entity.ai.EntityAIFairyLookAtTradePlayer;
 import grimhart.aota.entity.ai.EntityAIFairyTradePlayer;
 import grimhart.aota.init.ModItems;
+import grimhart.aota.trading.AOTATradeRegistry;
+import grimhart.aota.trading.EnumTradeEntity;
+import grimhart.aota.trading.ITradeList;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentData;
 import net.minecraft.enchantment.EnchantmentHelper;
@@ -61,7 +64,6 @@ public class EntityFairy extends EntityCreature implements IMerchant, INpc {
     private String lastBuyingPlayer;
     /** This is the EntityFairy's career level value */
     private int careerLevel;
-    private static ArrayList<ITradeList> tradeCollection = new ArrayList<ITradeList>();
     public EntityFairy(World worldIn) {
         super(worldIn);
         this.setSize(0.4F, 0.8F);
@@ -339,14 +341,13 @@ public class EntityFairy extends EntityCreature implements IMerchant, INpc {
             this.buyingList = new MerchantRecipeList();
         }
 
-        int j = this.careerLevel - 1;
-        List<ITradeList> trades = tradeCollection;
+        List<ITradeList> trades = AOTATradeRegistry.getTradesOfType(EnumTradeEntity.FAIRY);
 
         if (trades != null)
         {
-            for (EntityFairy.ITradeList EntityFairy$itradelist : trades)
+            for (ITradeList itradelist : trades)
             {
-                EntityFairy$itradelist.addMerchantRecipe(this, this.buyingList, this.rand);
+                itradelist.addMerchantRecipe(this, this.buyingList, this.rand);
             }
         }
     }
@@ -475,215 +476,6 @@ public class EntityFairy extends EntityCreature implements IMerchant, INpc {
 
             this.world.spawnEntity(entityVex);
             this.setDead();
-        }
-    }
-
-    public static class EmeraldForItems implements EntityFairy.ITradeList
-    {
-        public Item buyingItem;
-        public EntityFairy.PriceInfo price;
-
-        public EmeraldForItems(Item itemIn, EntityFairy.PriceInfo priceIn)
-        {
-            this.buyingItem = itemIn;
-            this.price = priceIn;
-        }
-
-        public void addMerchantRecipe(IMerchant p_190888_1_, MerchantRecipeList p_190888_2_, Random p_190888_3_)
-        {
-            int i = 1;
-
-            if (this.price != null)
-            {
-                i = this.price.getPrice(p_190888_3_);
-            }
-
-            p_190888_2_.add(new MerchantRecipe(new ItemStack(this.buyingItem, i, 0), ModItems.tokenBag));
-        }
-    }
-
-    public interface ITradeList
-    {
-        void addMerchantRecipe(IMerchant p_190888_1_, MerchantRecipeList p_190888_2_, Random p_190888_3_);
-    }
-
-    public static class ItemAndEmeraldToItem implements EntityFairy.ITradeList
-    {
-        /**
-         * The itemstack to buy with an emerald. The Item and damage value is used only, any tag data is not
-         * retained.
-         */
-        public ItemStack buyingItemStack;
-        /** The price info defining the amount of the buying item required with 1 emerald to match the selling item. */
-        public EntityFairy.PriceInfo buyingPriceInfo;
-        /** The itemstack to sell. The item and damage value are used only, any tag data is not retained. */
-        public ItemStack sellingItemstack;
-        public EntityFairy.PriceInfo sellingPriceInfo;
-
-        public ItemAndEmeraldToItem(Item p_i45813_1_, EntityFairy.PriceInfo p_i45813_2_, Item p_i45813_3_, EntityFairy.PriceInfo p_i45813_4_)
-        {
-            this.buyingItemStack = new ItemStack(p_i45813_1_);
-            this.buyingPriceInfo = p_i45813_2_;
-            this.sellingItemstack = new ItemStack(p_i45813_3_);
-            this.sellingPriceInfo = p_i45813_4_;
-        }
-
-        public void addMerchantRecipe(IMerchant p_190888_1_, MerchantRecipeList p_190888_2_, Random p_190888_3_)
-        {
-            int i = this.buyingPriceInfo.getPrice(p_190888_3_);
-            int j = this.sellingPriceInfo.getPrice(p_190888_3_);
-            p_190888_2_.add(new MerchantRecipe(new ItemStack(this.buyingItemStack.getItem(), i, this.buyingItemStack.getMetadata()), new ItemStack(Items.EMERALD), new ItemStack(this.sellingItemstack.getItem(), j, this.sellingItemstack.getMetadata())));
-        }
-    }
-
-    public static class ListEnchantedBookForEmeralds implements EntityFairy.ITradeList
-    {
-        public void addMerchantRecipe(IMerchant p_190888_1_, MerchantRecipeList p_190888_2_, Random p_190888_3_)
-        {
-            Enchantment enchantment = (Enchantment)Enchantment.REGISTRY.getRandomObject(p_190888_3_);
-            int i = MathHelper.getInt(p_190888_3_, enchantment.getMinLevel(), enchantment.getMaxLevel());
-            ItemStack itemstack = Items.ENCHANTED_BOOK.getEnchantedItemStack(new EnchantmentData(enchantment, i));
-            int j = 2 + p_190888_3_.nextInt(5 + i * 10) + 3 * i;
-
-            if (enchantment.isTreasureEnchantment())
-            {
-                j *= 2;
-            }
-
-            if (j > 64)
-            {
-                j = 64;
-            }
-
-            p_190888_2_.add(new MerchantRecipe(new ItemStack(Items.BOOK), new ItemStack(Items.EMERALD, j), itemstack));
-        }
-    }
-
-    public static class ListEnchantedItemForEmeralds implements EntityFairy.ITradeList
-    {
-        /** The enchanted item stack to sell */
-        public ItemStack enchantedItemStack;
-        /** The price info determining the amount of emeralds to trade in for the enchanted item */
-        public EntityFairy.PriceInfo priceInfo;
-
-        public ListEnchantedItemForEmeralds(Item p_i45814_1_, EntityFairy.PriceInfo p_i45814_2_)
-        {
-            this.enchantedItemStack = new ItemStack(p_i45814_1_);
-            this.priceInfo = p_i45814_2_;
-        }
-
-        @Override
-        public void addMerchantRecipe(IMerchant p_190888_1_, MerchantRecipeList p_190888_2_, Random p_190888_3_)
-        {
-            int i = 1;
-
-            if (this.priceInfo != null)
-            {
-                i = this.priceInfo.getPrice(p_190888_3_);
-            }
-
-            ItemStack itemstack = new ItemStack(Items.EMERALD, i, 0);
-            ItemStack itemstack1 = EnchantmentHelper.addRandomEnchantment(p_190888_3_, new ItemStack(this.enchantedItemStack.getItem(), 1, this.enchantedItemStack.getMetadata()), 5 + p_190888_3_.nextInt(15), false);
-            p_190888_2_.add(new MerchantRecipe(itemstack, itemstack1));
-        }
-    }
-
-    public static class ListItemForEmeralds implements EntityFairy.ITradeList
-    {
-        /** The item that is being bought for emeralds */
-        public ItemStack itemToBuy;
-        /**
-         * The price info for the amount of emeralds to sell for, or if negative, the amount of the item to buy for
-         * an emerald.
-         */
-        public EntityFairy.PriceInfo priceInfo;
-
-        public ListItemForEmeralds(Item par1Item, EntityFairy.PriceInfo priceInfo)
-        {
-            this.itemToBuy = new ItemStack(par1Item);
-            this.priceInfo = priceInfo;
-        }
-
-        public ListItemForEmeralds(ItemStack stack, EntityFairy.PriceInfo priceInfo)
-        {
-            this.itemToBuy = stack;
-            this.priceInfo = priceInfo;
-        }
-
-        @Override
-        public void addMerchantRecipe(IMerchant p_190888_1_, MerchantRecipeList p_190888_2_, Random p_190888_3_)
-        {
-            int i = 1;
-
-            if (this.priceInfo != null)
-            {
-                i = this.priceInfo.getPrice(p_190888_3_);
-            }
-
-            ItemStack itemstack;
-            ItemStack itemstack1;
-
-            if (i < 0)
-            {
-                itemstack = new ItemStack(Items.EMERALD);
-                itemstack1 = new ItemStack(this.itemToBuy.getItem(), -i, this.itemToBuy.getMetadata());
-            }
-            else
-            {
-                itemstack = new ItemStack(Items.EMERALD, i, 0);
-                itemstack1 = new ItemStack(this.itemToBuy.getItem(), 1, this.itemToBuy.getMetadata());
-            }
-
-            p_190888_2_.add(new MerchantRecipe(itemstack, itemstack1));
-        }
-    }
-
-    public static class PriceInfo extends Tuple<Integer, Integer>
-    {
-        public PriceInfo(int p_i45810_1_, int p_i45810_2_)
-        {
-            super(Integer.valueOf(p_i45810_1_), Integer.valueOf(p_i45810_2_));
-
-            if (p_i45810_2_ < p_i45810_1_)
-            {
-                System.out.println(String.format("PriceRange({}, {}) invalid, {} smaller than {}", new Object[] {Integer.valueOf(p_i45810_1_), Integer.valueOf(p_i45810_2_), Integer.valueOf(p_i45810_2_), Integer.valueOf(p_i45810_1_)}));
-            }
-        }
-
-        public int getPrice(Random rand)
-        {
-            return this.getFirst().intValue() >= this.getSecond().intValue() ? this.getFirst().intValue() : this.getFirst().intValue() + rand.nextInt(this.getSecond().intValue() - this.getFirst().intValue() + 1);
-        }
-    }
-
-    static class TreasureMapForEmeralds implements EntityFairy.ITradeList
-    {
-        public EntityFairy.PriceInfo value;
-        public String destination;
-        public MapDecoration.Type destinationType;
-
-        public TreasureMapForEmeralds(EntityFairy.PriceInfo p_i47340_1_, String p_i47340_2_, MapDecoration.Type p_i47340_3_)
-        {
-            this.value = p_i47340_1_;
-            this.destination = p_i47340_2_;
-            this.destinationType = p_i47340_3_;
-        }
-
-        @Override
-        public void addMerchantRecipe(IMerchant p_190888_1_, MerchantRecipeList p_190888_2_, Random p_190888_3_)
-        {
-            int i = this.value.getPrice(p_190888_3_);
-            World world = p_190888_1_.getWorld();
-            BlockPos blockpos = world.findNearestStructure(this.destination, p_190888_1_.getPos(), true);
-
-            if (blockpos != null)
-            {
-                ItemStack itemstack = ItemMap.setupNewMap(world, (double)blockpos.getX(), (double)blockpos.getZ(), (byte)2, true, true);
-                ItemMap.renderBiomePreviewMap(world, itemstack);
-                MapData.addTargetDecoration(itemstack, blockpos, "+", this.destinationType);
-                itemstack.setTranslatableName("filled_map." + this.destination.toLowerCase(Locale.ROOT));
-                p_190888_2_.add(new MerchantRecipe(new ItemStack(Items.EMERALD, i), new ItemStack(Items.COMPASS), itemstack));
-            }
         }
     }
 }

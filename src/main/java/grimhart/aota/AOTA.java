@@ -1,5 +1,6 @@
 package grimhart.aota;
 
+import grimhart.aota.entity.EntityFairy;
 import grimhart.aota.init.ModTools;
 import grimhart.aota.handlers.RecipeHandler;
 import grimhart.aota.init.ModArmour;
@@ -7,12 +8,14 @@ import grimhart.aota.init.ModItems;
 import grimhart.aota.proxy.CommonProxy;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.common.registry.EntityRegistry;
 
 import javax.annotation.Nonnull;
 
@@ -40,6 +43,9 @@ public class AOTA {
 		ModTools.register();
 		ModArmour.init();
 		ModArmour.register();
+
+		int eid=-1;
+		EntityRegistry.registerModEntity(new ResourceLocation(Reference.MODID+":fairy"), EntityFairy.class, "fairy", ++eid, instance, 32, 2, false);
 		
 		proxy.registerRenders();
 	}
