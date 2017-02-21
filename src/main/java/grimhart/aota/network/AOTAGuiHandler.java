@@ -1,14 +1,10 @@
-package grimhart.aota.handlers;
+package grimhart.aota.network;
 
-import grimhart.aota.entity.EntityFairy;
-import net.minecraft.client.gui.GuiMerchant;
+import grimhart.aota.client.gui.GuiTrading;
+import grimhart.aota.container.ContainerTrading;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.IMerchant;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.entity.player.EntityPlayerMP;
-import net.minecraft.inventory.ContainerMerchant;
-import net.minecraft.tileentity.TileEntity;
-import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.common.network.IGuiHandler;
 
@@ -21,9 +17,9 @@ public class AOTAGuiHandler implements IGuiHandler {
         switch (ID) {
             default:
                 Entity entity = world.getEntityByID(ID);
-                if(entity != null){
-                    if(entity instanceof IMerchant){
-                        return new ContainerMerchant(player.inventory, (IMerchant) entity, world);
+                if (entity != null) {
+                    if (entity instanceof IMerchant) {
+                        return new ContainerTrading(player.inventory, (IMerchant) entity, world);
                     }
                 }
                 return null;
@@ -35,9 +31,9 @@ public class AOTAGuiHandler implements IGuiHandler {
         switch (ID) {
             default:
                 Entity entity = world.getEntityByID(ID);
-                if(entity != null){
-                    if(entity instanceof IMerchant){
-                        return new GuiMerchant(player.inventory, (IMerchant) entity, world);
+                if (entity != null) {
+                    if (entity instanceof IMerchant) {
+                        return new GuiTrading(player.inventory, (IMerchant) entity, world);
                     }
                 }
                 return null;
