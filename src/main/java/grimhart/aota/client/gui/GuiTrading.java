@@ -80,8 +80,8 @@ public class GuiTrading extends GuiContainer {
     @Override
     protected void drawGuiContainerForegroundLayer(int mouseX, int mouseY) {
         String s = this.chatComponent.getUnformattedText();
-        this.fontRendererObj.drawString(s, this.xSize / 2 - this.fontRendererObj.getStringWidth(s) / 2, 6, 4210752);
-        this.fontRendererObj.drawString(I18n.format("container.inventory"), 8, this.ySize - 96 + 2, 4210752);
+        this.fontRenderer.drawString(s, this.xSize / 2 - this.fontRenderer.getStringWidth(s) / 2, 6, 4210752);
+        this.fontRenderer.drawString(I18n.format("container.inventory"), 8, this.ySize - 96 + 2, 4210752);
     }
 
     /**
@@ -185,15 +185,15 @@ public class GuiTrading extends GuiContainer {
             GlStateManager.enableLighting();
             this.itemRender.zLevel = 100.0F;
             this.itemRender.renderItemAndEffectIntoGUI(itemstack, i + 36, j + 24);
-            this.itemRender.renderItemOverlays(this.fontRendererObj, itemstack, i + 36, j + 24);
+            this.itemRender.renderItemOverlays(this.fontRenderer, itemstack, i + 36, j + 24);
 
             if (!itemstack1.isEmpty()) {
                 this.itemRender.renderItemAndEffectIntoGUI(itemstack1, i + 62, j + 24);
-                this.itemRender.renderItemOverlays(this.fontRendererObj, itemstack1, i + 62, j + 24);
+                this.itemRender.renderItemOverlays(this.fontRenderer, itemstack1, i + 62, j + 24);
             }
 
             this.itemRender.renderItemAndEffectIntoGUI(itemstack2, i + 120, j + 24);
-            this.itemRender.renderItemOverlays(this.fontRendererObj, itemstack2, i + 120, j + 24);
+            this.itemRender.renderItemOverlays(this.fontRenderer, itemstack2, i + 120, j + 24);
             this.itemRender.zLevel = 0.0F;
             GlStateManager.disableLighting();
 
@@ -204,7 +204,7 @@ public class GuiTrading extends GuiContainer {
             } else if (!itemstack2.isEmpty() && this.isPointInRegion(120, 24, 16, 16, mouseX, mouseY) && !itemstack2.isEmpty()) {
                 this.renderToolTip(itemstack2, mouseX, mouseY);
             } else if (merchantrecipe.isRecipeDisabled() && (this.isPointInRegion(83, 21, 28, 21, mouseX, mouseY) || this.isPointInRegion(83, 51, 28, 21, mouseX, mouseY))) {
-                this.drawCreativeTabHoveringText(I18n.format("merchant.deprecated"), mouseX, mouseY);
+                this.drawHoveringText(I18n.format("merchant.deprecated"), mouseX, mouseY);
             }
 
             GlStateManager.popMatrix();
