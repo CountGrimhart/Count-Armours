@@ -82,9 +82,9 @@ public class EntityFairy extends EntityCreature implements IMerchant, INpc {
         this.tasks.addTask(3, new EntityAIRestrictOpenDoor(this));
         this.tasks.addTask(4, new EntityAIOpenDoor(this, true));
         this.tasks.addTask(5, new EntityAIMoveTowardsRestriction(this, 0.6D));
-        this.tasks.addTask(9, new EntityAIWatchClosest2(this, EntityPlayer.class, 3.0F, 1.0F));
-        this.tasks.addTask(9, new EntityAIWanderAvoidWater(this, 0.6D));
-        this.tasks.addTask(10, new EntityAIWatchClosest(this, EntityLiving.class, 8.0F));
+        this.tasks.addTask(6, new EntityAIWatchClosest2(this, EntityPlayer.class, 3.0F, 1.0F));
+        this.tasks.addTask(6, new EntityAIWanderAvoidWater(this, 0.6D));
+        this.tasks.addTask(7, new EntityAIWatchClosest(this, EntityLiving.class, 8.0F));
     }
 
     @Override
@@ -105,6 +105,7 @@ public class EntityFairy extends EntityCreature implements IMerchant, INpc {
             {
                 if (this.needsInitilization)
                 {
+                    AOTA.logDebug("Initializing Fairy "+hashCode());
                     for (MerchantRecipe merchantrecipe : this.buyingList)
                     {
                         if (merchantrecipe.isRecipeDisabled())
@@ -150,7 +151,7 @@ public class EntityFairy extends EntityCreature implements IMerchant, INpc {
             if (!this.world.isRemote && !this.buyingList.isEmpty())
             {
                 this.setCustomer(player);
-                player.openGui(AOTA.instance, getEntityId(), world, (int)posX, (int)posY, (int)posZ);
+                player.openGui(AOTA.instance, hashCode(), world, (int)posX, (int)posY, (int)posZ);
             }
             else if (this.buyingList.isEmpty())
             {
@@ -330,6 +331,7 @@ public class EntityFairy extends EntityCreature implements IMerchant, INpc {
 
     private void populateBuyingList()
     {
+        AOTA.logDebug("Populating buying list of Fairy "+hashCode());
         if (this.careerLevel != 0)
         {
             ++this.careerLevel;

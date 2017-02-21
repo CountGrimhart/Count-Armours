@@ -1,5 +1,6 @@
 package grimhart.aota.trading;
 
+import grimhart.aota.AOTA;
 import net.minecraft.util.Tuple;
 
 import java.util.Random;
@@ -8,16 +9,16 @@ public class PriceInfo extends Tuple<Integer, Integer>
 {
     public PriceInfo(int minPrice, int maxPrice)
     {
-        super(Integer.valueOf(minPrice), Integer.valueOf(maxPrice));
+        super(minPrice, maxPrice);
 
         if (maxPrice < minPrice)
         {
-            System.out.println(String.format("PriceRange({}, {}) invalid, {} smaller than {}", new Object[] {Integer.valueOf(minPrice), Integer.valueOf(maxPrice), Integer.valueOf(maxPrice), Integer.valueOf(minPrice)}));
+            AOTA.logError(String.format("PriceRange(%d, %d) invalid, %d smaller than %d", minPrice, maxPrice, maxPrice, minPrice));
         }
     }
 
     public int getPrice(Random rand)
     {
-        return this.getFirst().intValue() >= this.getSecond().intValue() ? this.getFirst().intValue() : this.getFirst().intValue() + rand.nextInt(this.getSecond().intValue() - this.getFirst().intValue() + 1);
+        return this.getFirst() >= this.getSecond() ? this.getFirst() : this.getFirst() + rand.nextInt(this.getSecond() - this.getFirst() + 1);
     }
 }

@@ -25,12 +25,12 @@ public final class AOTATradeRegistry {
      * @param type
      *  The entity type to trade with.
      * @param resultItem
-     *  The item that will be recieved from the trade.
+     *  The item that is being bought for tokens
      * @param pricing
-     *  The pricing information.
+     *  The price info for the amount of tokens to sell for, or if negative, the amount of the item to buy for a token.
      */
-    public static void addTokenToItemRecipe(EnumTradeEntity type, Item resultItem, PriceInfo pricing){
-        getTradesOfType(type).add(new TokensForItems(resultItem, pricing));
+    public static void addItemToTokenRecipe(EnumTradeEntity type, Item resultItem, PriceInfo pricing){
+        getTradesOfType(type).add(new ItemsToTokens(resultItem, pricing));
     }
 
     /**
@@ -43,7 +43,7 @@ public final class AOTATradeRegistry {
      *  The pricing information.
      */
     public static void addTokenToEnchItemRecipe(EnumTradeEntity type, Item resultItem, PriceInfo pricing){
-        getTradesOfType(type).add(new EnchantedItemsForTokens(resultItem, pricing));
+        getTradesOfType(type).add(new TokensToEnchantedItems(resultItem, pricing));
     }
 
     /**
@@ -68,11 +68,11 @@ public final class AOTATradeRegistry {
      * @param type
      *  The entity type to trade with.
      * @param resultItem
-     *  The item that is being bought for tokens
+     *  The item that will be recieved from the trade.
      * @param pricing
-     *  The price info for the amount of tokens to sell for, or if negative, the amount of the item to buy for a token.
+     *  The pricing information.
      */
-    public static void addItemToTokenRecipe(EnumTradeEntity type, Item resultItem, PriceInfo pricing){
-        getTradesOfType(type).add(new ItemsForTokens(resultItem, pricing));
+    public static void addTokenToItemRecipe(EnumTradeEntity type, Item resultItem, PriceInfo pricing){
+        getTradesOfType(type).add(new TokensToItems(resultItem, pricing));
     }
 }

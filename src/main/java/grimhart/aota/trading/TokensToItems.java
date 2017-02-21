@@ -13,7 +13,7 @@ import java.util.Random;
 /**
  * @author The_Fireplace
  */
-public class ItemsForTokens implements ITradeList
+public class TokensToItems implements ITradeList
 {
     /** The item that is being bought for tokens */
     public ItemStack itemToBuy;
@@ -22,13 +22,13 @@ public class ItemsForTokens implements ITradeList
      */
     public PriceInfo priceInfo;
 
-    public ItemsForTokens(Item par1Item, PriceInfo priceInfo)
+    public TokensToItems(Item par1Item, PriceInfo priceInfo)
     {
         this.itemToBuy = new ItemStack(par1Item);
         this.priceInfo = priceInfo;
     }
 
-    public ItemsForTokens(ItemStack stack, PriceInfo priceInfo)
+    public TokensToItems(ItemStack stack, PriceInfo priceInfo)
     {
         this.itemToBuy = stack;
         this.priceInfo = priceInfo;

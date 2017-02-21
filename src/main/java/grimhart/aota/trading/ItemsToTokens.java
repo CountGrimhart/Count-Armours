@@ -10,12 +10,14 @@ import net.minecraft.village.MerchantRecipeList;
 
 import java.util.Random;
 
-public class TokensForItems implements ITradeList
+import static java.lang.Math.abs;
+
+public class ItemsToTokens implements ITradeList
 {
     public Item buyingItem;
     public PriceInfo price;
 
-    public TokensForItems(Item itemIn, PriceInfo priceIn)
+    public ItemsToTokens(Item itemIn, PriceInfo priceIn)
     {
         this.buyingItem = itemIn;
         this.price = priceIn;
@@ -30,6 +32,6 @@ public class TokensForItems implements ITradeList
             i = this.price.getPrice(rand);
         }
 
-        recipeList.add(new MerchantRecipe(new ItemStack(this.buyingItem, i), ModItems.trading_token));
+        recipeList.add(new MerchantRecipe(new ItemStack(this.buyingItem, i < 0 ? abs(i) : 1), new ItemStack(ModItems.trading_token, i < 0 ? 1 : i)));
     }
 }

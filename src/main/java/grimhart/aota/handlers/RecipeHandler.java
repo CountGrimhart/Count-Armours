@@ -3,6 +3,9 @@ package grimhart.aota.handlers;
 import grimhart.aota.init.ModTools;
 import grimhart.aota.init.ModArmour;
 import grimhart.aota.init.ModItems;
+import grimhart.aota.trading.AOTATradeRegistry;
+import grimhart.aota.trading.EnumTradeEntity;
+import grimhart.aota.trading.PriceInfo;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.common.registry.GameRegistry;
@@ -14,6 +17,8 @@ public class RecipeHandler {
 	 public static void registerCraftingRecipes() {
 		 addRecipe(new ItemStack(ModItems.token_bag, 1), "CCC", "CCC", "CCC", 'I', "ingotIron", 'S', "stickWood", 'C', ModItems.trading_token);
 		 addRecipe(new ItemStack(ModTools.longSword, 1), " I ", " I ", "CS ", 'I', "ingotIron", 'S', "stickWood", 'C', ModItems.token_bag);
+		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.FAIRY, ModTools.longSword, new PriceInfo(10, 15));
+		 AOTATradeRegistry.addItemToTokenRecipe(EnumTradeEntity.FAIRY, Items.WHEAT, new PriceInfo(-10, -15));
 		 addShapelessRecipe(new ItemStack(Items.PAPER, 5), Items.WHEAT, Items.WHEAT, Items.WHEAT, Items.WHEAT, Items.WHEAT);
 		 
 		 //RED

@@ -11,14 +11,14 @@ import net.minecraft.village.MerchantRecipeList;
 
 import java.util.Random;
 
-public class EnchantedItemsForTokens implements ITradeList
+public class TokensToEnchantedItems implements ITradeList
 {
     /** The enchanted item stack to sell */
     public ItemStack enchantedItemStack;
     /** The price info determining the number of tokens to trade in for the enchanted item */
     public PriceInfo priceInfo;
 
-    public EnchantedItemsForTokens(Item sellingItem, PriceInfo priceInfo)
+    public TokensToEnchantedItems(Item sellingItem, PriceInfo priceInfo)
     {
         this.enchantedItemStack = new ItemStack(sellingItem);
         this.priceInfo = priceInfo;

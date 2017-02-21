@@ -19,6 +19,7 @@ import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.network.NetworkRegistry;
 import net.minecraftforge.fml.common.registry.EntityRegistry;
+import org.apache.logging.log4j.Logger;
 
 import javax.annotation.Nonnull;
 
@@ -37,9 +38,12 @@ public class AOTA {
 			return new ItemStack(ModArmour.EuroditeHelmet);
 		}
 	};
+
+	private static Logger logger;
 	
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event) {
+		logger = event.getModLog();
 		ModItems.init();
 		ModItems.register();
 		ModTools.init();
@@ -59,7 +63,23 @@ public class AOTA {
 	public void init(FMLInitializationEvent event) {
 		RecipeHandler.registerCraftingRecipes();
 	}
-	@EventHandler
-	public void postInit(FMLPostInitializationEvent event) {
+	public static void logInfo(Object log){
+		logger.info(log);
+	}
+
+	public static void logDebug(Object log){
+		logger.debug(log);
+	}
+
+	public static void logError(Object log){
+		logger.error(log);
+	}
+
+	public static void logTrace(Object log){
+		logger.trace(log);
+	}
+
+	public static void logWarn(Object log){
+		logger.warn(log);
 	}
 }
