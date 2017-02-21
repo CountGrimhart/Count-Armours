@@ -10,6 +10,8 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.common.util.EnumHelper;
 import net.minecraftforge.fml.common.registry.GameRegistry;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class ModTools {
 
@@ -24,13 +26,15 @@ public class ModTools {
 	public static void register(){
 		registerItem(longSword);
 	}
+	@SideOnly(Side.CLIENT)
 	public static void registerRenders(){
 		registerRender(longSword);
 	}
 	public static void registerItem(Item item) {
 		GameRegistry.register(item);
 	}
-	
+
+	@SideOnly(Side.CLIENT)
 	public static void registerRender(Item item) {
 		ModelLoader.setCustomModelResourceLocation(item, 0, new ModelResourceLocation( new ResourceLocation(Reference.MODID, item.getUnlocalizedName().substring(5)), "inventory"));
 	}

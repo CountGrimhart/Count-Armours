@@ -1,5 +1,6 @@
 package grimhart.aota.client.rendering;
 
+import grimhart.aota.client.model.ModelFairy;
 import grimhart.aota.entity.EntityFairy;
 import net.minecraft.client.model.ModelVex;
 import net.minecraft.client.renderer.GlStateManager;
@@ -12,13 +13,13 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 @SideOnly(Side.CLIENT)
 public class RenderFairy extends RenderBiped<EntityFairy>
 {
-    private static final ResourceLocation FAIRY_TEX = new ResourceLocation("aota","textures/entity/illager/vex.png");
+    private static final ResourceLocation FAIRY_TEX = new ResourceLocation("aota","textures/entity/fai.png");
     private int modelVersion;
 
-    public RenderFairy(RenderManager p_i47190_1_)
+    public RenderFairy(RenderManager rm)
     {
-        super(p_i47190_1_, new ModelVex(), 0.3F);
-        this.modelVersion = ((ModelVex)this.mainModel).getModelVersion();
+        super(rm, new ModelFairy(), 0.3F);
+        this.modelVersion = ((ModelFairy)this.mainModel).getModelVersion();
     }
 
     /**
@@ -36,11 +37,11 @@ public class RenderFairy extends RenderBiped<EntityFairy>
     @Override
     public void doRender(EntityFairy entity, double x, double y, double z, float entityYaw, float partialTicks)
     {
-        int i = ((ModelVex)this.mainModel).getModelVersion();
+        int i = ((ModelFairy)this.mainModel).getModelVersion();
 
         if (i != this.modelVersion)
         {
-            this.mainModel = new ModelVex();
+            this.mainModel = new ModelFairy();
             this.modelVersion = i;
         }
 

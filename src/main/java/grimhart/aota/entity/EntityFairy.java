@@ -1,5 +1,6 @@
 package grimhart.aota.entity;
 
+import grimhart.aota.AOTA;
 import grimhart.aota.entity.ai.EntityAIFairyLookAtTradePlayer;
 import grimhart.aota.entity.ai.EntityAIFairyTradePlayer;
 import grimhart.aota.init.ModItems;
@@ -42,6 +43,7 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
 import javax.annotation.Nullable;
+import javax.annotation.ParametersAreNonnullByDefault;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
@@ -50,6 +52,7 @@ import java.util.Random;
 /**
  * @author The_Fireplace
  */
+@ParametersAreNonnullByDefault
 public class EntityFairy extends EntityCreature implements IMerchant, INpc {
     /** This villager's current customer. */
     private EntityPlayer buyingPlayer;
@@ -147,7 +150,7 @@ public class EntityFairy extends EntityCreature implements IMerchant, INpc {
             if (!this.world.isRemote && !this.buyingList.isEmpty())
             {
                 this.setCustomer(player);
-                player.displayVillagerTradeGui(this);
+                player.openGui(AOTA.instance, getEntityId(), world, (int)posX, (int)posY, (int)posZ);
             }
             else if (this.buyingList.isEmpty())
             {

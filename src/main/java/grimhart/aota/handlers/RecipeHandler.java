@@ -29,9 +29,7 @@ public class RecipeHandler {
 		 addShapelessRecipe(new ItemStack(ModArmour.EuroditeHelmetC, 1), Items.IRON_HELMET,  Items.POTATO,  Items.POTATO,  Items.POTATO);
 		 addShapelessRecipe(new ItemStack(ModArmour.EuroditeChestplateC, 1), Items.IRON_CHESTPLATE,  Items.POTATO,  Items.POTATO,  Items.POTATO);
 		 addShapelessRecipe(new ItemStack(ModArmour.EuroditeLeggingsC, 1), Items.IRON_LEGGINGS,  "dyeRed", "dyeRed", "dyeRed");
-		 
-		 
-		 
+
 		 //Blue
 		 addShapelessRecipe(new ItemStack(ModArmour.EuroditeHelmetD), Items.IRON_HELMET,  Items.POTATO, Items.POTATO, Items.POTATO, Items.POTATO);
 		 addShapelessRecipe(new ItemStack(ModArmour.EuroditeChestplateD), Items.IRON_CHESTPLATE,  Items.POTATO, Items.POTATO, Items.POTATO, Items.POTATO);
@@ -172,7 +170,6 @@ public class RecipeHandler {
 		 addShapelessRecipe(new ItemStack(ModArmour.SunjinLeggingsSP1), Items.IRON_LEGGINGS, Items.SUGAR, "dyePurple");
 
 		 addShapelessRecipe(new ItemStack(ModArmour.SunjinHelmetANA1),  Items.STRING, Items.SUGAR);
-
 
 		 //Sigma
 		 //Red
