@@ -258,6 +258,7 @@ public abstract class EntityTradeable extends EntityCreature implements IMerchan
     @SideOnly(Side.CLIENT)
     @Override
     public void setRecipes(@Nullable MerchantRecipeList recipeList) {
+        this.buyingList = recipeList;
     }
 
     @Override

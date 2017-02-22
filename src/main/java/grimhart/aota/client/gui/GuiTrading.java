@@ -130,9 +130,6 @@ public class GuiTrading extends GuiContainer {
         }
     }
 
-    /**
-     * Draws the background layer of this container (behind the items).
-     */
     @Override
     protected void drawGuiContainerBackgroundLayer(float partialTicks, int mouseX, int mouseY) {
         GlStateManager.color(1.0F, 1.0F, 1.0F, 1.0F);

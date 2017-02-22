@@ -1,5 +1,6 @@
 package grimhart.aota.network.packets.serverbound;
 
+import grimhart.aota.AOTA;
 import grimhart.aota.container.ContainerTrading;
 import grimhart.aota.network.packets.AbstractServerMessageHandler;
 import io.netty.buffer.ByteBuf;
@@ -38,7 +39,10 @@ public class TradeSelectionMessage implements IMessage {
             Container container = player.openContainer;
 
             if (container instanceof ContainerTrading) {
+                AOTA.logDebug("Recieved trade recipe update packet: Recipe "+message.selectedTradeRecipe);
                 ((ContainerTrading) container).setCurrentRecipeIndex(message.selectedTradeRecipe);
+            }else{
+                AOTA.logError("Trade recipe packet update recieved, but container is not open");
             }
             return null;
         }
