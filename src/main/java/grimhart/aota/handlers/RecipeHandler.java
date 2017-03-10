@@ -18,6 +18,7 @@ public class RecipeHandler {
 		 addRecipe(new ItemStack(ModItems.token_bag, 1), "CCC", "CCC", "CCC", 'I', "ingotIron", 'S', "stickWood", 'C', ModItems.trading_token);
 		 addRecipe(new ItemStack(ModTools.longSword, 1), " I ", " I ", "CS ", 'I', "ingotIron", 'S', "stickWood", 'C', ModItems.token_bag);
 
+		 AOTATradeRegistry.addItemToTokenRecipe(EnumTradeEntity.FAIRY, Items.WHEAT, new PriceInfo(-10, -15));
 		 //To Item Trade
 		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.FAIRY, ModTools.longSword, new PriceInfo(10, 15));
 		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.FAIRY, ModArmour.EuroditeHelmet, new PriceInfo(10, 15));
@@ -72,8 +73,79 @@ public class RecipeHandler {
 		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.FAIRY, ModArmour.EuroditeLeggingsCR3, new PriceInfo(10, 15));
 		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.FAIRY, ModArmour.EuroditeHelmetCR4, new PriceInfo(10, 15));
 		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.FAIRY, ModArmour.EuroditeLeggingsCR4, new PriceInfo(10, 15));
+		 /*
+		 //Sunjin Items
+		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.AKUMA, ModArmour.SunjinHelmetSB1, new PriceInfo(10, 15));
+		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.AKUMA, ModArmour.SunjinHelmetSB2, new PriceInfo(10, 15));
+		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.AKUMA, ModArmour.SunjinHelmetAB1, new PriceInfo(10, 15));
+		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.AKUMA, ModArmour.SunjinChestplateSB1, new PriceInfo(10, 15));
+		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.AKUMA, ModArmour.SunjinChestplateSB2, new PriceInfo(10, 15));
+		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.AKUMA, ModArmour.SunjinChestplateSB3, new PriceInfo(10, 15));
+		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.AKUMA, ModArmour.SunjinChestplateAB1, new PriceInfo(10, 15));
+		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.AKUMA, ModArmour.SunjinLeggingsSB1, new PriceInfo(10, 15));
+		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.AKUMA, ModArmour.SunjinBootsSB1, new PriceInfo(10, 15));
+		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.AKUMA, ModArmour.SunjinHelmetSBL1, new PriceInfo(10, 15));
+		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.AKUMA, ModArmour.SunjinHelmetSBL2, new PriceInfo(10, 15));
+		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.AKUMA, ModArmour.SunjinHelmetABL1, new PriceInfo(10, 15));
+		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.AKUMA, ModArmour.SunjinChestplateSBL1, new PriceInfo(10, 15));
+		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.AKUMA, ModArmour.SunjinChestplateSBL2, new PriceInfo(10, 15));
+		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.AKUMA, ModArmour.SunjinChestplateSBL3, new PriceInfo(10, 15));
+		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.AKUMA, ModArmour.SunjinChestplateABL1, new PriceInfo(10, 15));
+		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.AKUMA, ModArmour.SunjinLeggingsSBL1, new PriceInfo(10, 15));
+		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.AKUMA, ModArmour.SunjinBootsSBL1, new PriceInfo(10, 15));
+		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.AKUMA, ModArmour.SunjinHelmetSG1, new PriceInfo(10, 15));
+		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.AKUMA, ModArmour.SunjinHelmetSG2, new PriceInfo(10, 15));
+		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.AKUMA, ModArmour.SunjinHelmetAG1, new PriceInfo(10, 15));
+		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.AKUMA, ModArmour.SunjinChestplateSG1, new PriceInfo(10, 15));
+		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.AKUMA, ModArmour.SunjinChestplateSG2, new PriceInfo(10, 15));
+		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.AKUMA, ModArmour.SunjinChestplateSG3, new PriceInfo(10, 15));
+		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.AKUMA, ModArmour.SunjinChestplateAG1, new PriceInfo(10, 15));
+		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.AKUMA, ModArmour.SunjinLeggingsSG1, new PriceInfo(10, 15));
+		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.AKUMA, ModArmour.SunjinBootsSG1, new PriceInfo(10, 15));
+		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.AKUMA, ModArmour.SunjinHelmetSR1, new PriceInfo(10, 15));
+		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.AKUMA, ModArmour.SunjinHelmetSR2, new PriceInfo(10, 15));
+		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.AKUMA, ModArmour.SunjinHelmetAR1, new PriceInfo(10, 15));
+		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.AKUMA, ModArmour.SunjinChestplateSR1, new PriceInfo(10, 15));
+		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.AKUMA, ModArmour.SunjinChestplateSR2, new PriceInfo(10, 15));
+		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.AKUMA, ModArmour.SunjinChestplateSR3, new PriceInfo(10, 15));
+		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.AKUMA, ModArmour.SunjinChestplateAR1, new PriceInfo(10, 15));
+		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.AKUMA, ModArmour.SunjinLeggingsSR1, new PriceInfo(10, 15));
+		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.AKUMA, ModArmour.SunjinBootsSR1, new PriceInfo(10, 15));
+		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.AKUMA, ModArmour.SunjinHelmetSW1, new PriceInfo(10, 15));
+		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.AKUMA, ModArmour.SunjinHelmetSW2, new PriceInfo(10, 15));
+		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.AKUMA, ModArmour.SunjinHelmetAW1, new PriceInfo(10, 15));
+		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.AKUMA, ModArmour.SunjinChestplateSW1, new PriceInfo(10, 15));
+		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.AKUMA, ModArmour.SunjinChestplateSW2, new PriceInfo(10, 15));
+		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.AKUMA, ModArmour.SunjinChestplateSW3, new PriceInfo(10, 15));
+		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.AKUMA, ModArmour.SunjinChestplateAW1, new PriceInfo(10, 15));
+		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.AKUMA, ModArmour.SunjinLeggingsSW1, new PriceInfo(10, 15));
+		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.AKUMA, ModArmour.SunjinBootsSW1, new PriceInfo(10, 15));
+		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.AKUMA, ModArmour.SunjinHelmetAC1, new PriceInfo(10, 15));
+		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.AKUMA, ModArmour.SunjinChestplateAC1, new PriceInfo(10, 15));
+		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.AKUMA, ModArmour.SunjinLeggingsSC1, new PriceInfo(10, 15));
+		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.AKUMA, ModArmour.SunjinHelmetAY1, new PriceInfo(10, 15));
+		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.AKUMA, ModArmour.SunjinChestplateAY1, new PriceInfo(10, 15));
+		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.AKUMA, ModArmour.SunjinLeggingsSY1, new PriceInfo(10, 15));
+		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.AKUMA, ModArmour.SunjinHelmetAP1, new PriceInfo(10, 15));
+		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.AKUMA, ModArmour.SunjinChestplateAP1, new PriceInfo(10, 15));
+		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.AKUMA, ModArmour.SunjinLeggingsSP1, new PriceInfo(10, 15));
+		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.AKUMA, ModArmour.SunjinHelmetANA1, new PriceInfo(10, 15));
+		 //SigmaItems
+		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.VOLUCRIS, ModArmour.SigmaHelmetR1, new PriceInfo(10, 15));
+		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.VOLUCRIS, ModArmour.SigmaChestplateR1, new PriceInfo(10, 15));
+		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.VOLUCRIS, ModArmour.SigmaLeggingsR1, new PriceInfo(10, 15));
+		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.VOLUCRIS, ModArmour.SigmaHelmetR2, new PriceInfo(10, 15));
+		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.VOLUCRIS, ModArmour.SigmaChestplateR2, new PriceInfo(10, 15));
+		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.VOLUCRIS, ModArmour.SigmaLeggingsR2, new PriceInfo(10, 15));
+		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.VOLUCRIS, ModArmour.SigmaHelmetB1, new PriceInfo(10, 15));
+		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.VOLUCRIS, ModArmour.SigmaChestplateB1, new PriceInfo(10, 15));
+		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.VOLUCRIS, ModArmour.SigmaLeggingsB1, new PriceInfo(10, 15));
+		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.VOLUCRIS, ModArmour.SigmaLeggingsB2, new PriceInfo(10, 15));
+		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.VOLUCRIS, ModArmour.SigmaLeggingsG1, new PriceInfo(10, 15));
+		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.VOLUCRIS, ModArmour.SigmaLeggingsG2, new PriceInfo(10, 15));
+		 */
 		 //To Token Trade
-		 AOTATradeRegistry.addItemToTokenRecipe(EnumTradeEntity.FAIRY, Items.WHEAT, new PriceInfo(-10, -15));
+
 
 		 addShapelessRecipe(new ItemStack(Items.PAPER, 5), Items.WHEAT, Items.WHEAT, Items.WHEAT, Items.WHEAT, Items.WHEAT);
 		 
