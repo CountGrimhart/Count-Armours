@@ -17,8 +17,64 @@ public class RecipeHandler {
 	 public static void registerCraftingRecipes() {
 		 addRecipe(new ItemStack(ModItems.token_bag, 1), "CCC", "CCC", "CCC", 'I', "ingotIron", 'S', "stickWood", 'C', ModItems.trading_token);
 		 addRecipe(new ItemStack(ModTools.longSword, 1), " I ", " I ", "CS ", 'I', "ingotIron", 'S', "stickWood", 'C', ModItems.token_bag);
+
+		 //To Item Trade
 		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.FAIRY, ModTools.longSword, new PriceInfo(10, 15));
+		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.FAIRY, ModArmour.EuroditeHelmet, new PriceInfo(10, 15));
+		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.FAIRY, ModArmour.EuroditeChestplate, new PriceInfo(10, 15));
+		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.FAIRY, ModArmour.EuroditeLeggings, new PriceInfo(10, 15));
+		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.FAIRY, ModArmour.EuroditeBoots, new PriceInfo(10, 15));
+		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.FAIRY, ModArmour.EuroditeHelmetB, new PriceInfo(10, 15));
+		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.FAIRY, ModArmour.EuroditeChestplateB, new PriceInfo(10, 15));
+		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.FAIRY, ModArmour.EuroditeLeggingsB, new PriceInfo(10, 15));
+		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.FAIRY, ModArmour.EuroditeHelmetC, new PriceInfo(10, 15));
+		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.FAIRY, ModArmour.EuroditeChestplateC, new PriceInfo(10, 15));
+		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.FAIRY, ModArmour.EuroditeLeggingsC, new PriceInfo(10, 15));
+		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.FAIRY, ModArmour.EuroditeHelmetD, new PriceInfo(10, 15));
+		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.FAIRY, ModArmour.EuroditeChestplateD, new PriceInfo(10, 15));
+		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.FAIRY, ModArmour.EuroditeLeggingsD, new PriceInfo(10, 15));
+		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.FAIRY, ModArmour.EuroditeHelmetE, new PriceInfo(10, 15));
+		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.FAIRY, ModArmour.EuroditeChestplateE, new PriceInfo(10, 15));
+		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.FAIRY, ModArmour.EuroditeLeggingsE, new PriceInfo(10, 15));
+		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.FAIRY, ModArmour.EuroditeHelmetF, new PriceInfo(10, 15));
+		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.FAIRY, ModArmour.EuroditeChestplateF, new PriceInfo(10, 15));
+		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.FAIRY, ModArmour.EuroditeLeggingsF, new PriceInfo(10, 15));
+		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.FAIRY, ModArmour.EuroditeHelmetG1, new PriceInfo(10, 15));
+		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.FAIRY, ModArmour.EuroditeChestplateG1, new PriceInfo(10, 15));
+		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.FAIRY, ModArmour.EuroditeLeggingsG1, new PriceInfo(10, 15));
+		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.FAIRY, ModArmour.EuroditeHelmetG2, new PriceInfo(10, 15));
+		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.FAIRY, ModArmour.EuroditeChestplateG2, new PriceInfo(10, 15));
+		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.FAIRY, ModArmour.EuroditeLeggingsG2, new PriceInfo(10, 15));
+		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.FAIRY, ModArmour.EuroditeHelmetG3, new PriceInfo(10, 15));
+		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.FAIRY, ModArmour.EuroditeChestplateG3, new PriceInfo(10, 15));
+		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.FAIRY, ModArmour.EuroditeLeggingsG3, new PriceInfo(10, 15));
+		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.FAIRY, ModArmour.EuroditeHelmetP1, new PriceInfo(10, 15));
+		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.FAIRY, ModArmour.EuroditeChestplateP1, new PriceInfo(10, 15));
+		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.FAIRY, ModArmour.EuroditeLeggingsP1, new PriceInfo(10, 15));
+		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.FAIRY, ModArmour.EuroditeHelmetP2, new PriceInfo(10, 15));
+		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.FAIRY, ModArmour.EuroditeChestplateP2, new PriceInfo(10, 15));
+		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.FAIRY, ModArmour.EuroditeLeggingsP2, new PriceInfo(10, 15));
+		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.FAIRY, ModArmour.EuroditeLeggingsP3, new PriceInfo(10, 15));
+		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.FAIRY, ModArmour.EuroditeLeggingsO1, new PriceInfo(10, 15));
+		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.FAIRY, ModArmour.EuroditeLeggingsO2, new PriceInfo(10, 15));
+		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.FAIRY, ModArmour.EuroditeLeggingsO3, new PriceInfo(10, 15));
+		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.FAIRY, ModArmour.EuroditeLeggingsY1, new PriceInfo(10, 15));
+		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.FAIRY, ModArmour.EuroditeLeggingsY2, new PriceInfo(10, 15));
+		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.FAIRY, ModArmour.EuroditeLeggingsY3, new PriceInfo(10, 15));
+		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.FAIRY, ModArmour.EuroditeHelmetCR1, new PriceInfo(10, 15));
+		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.FAIRY, ModArmour.EuroditeChestplateCR1, new PriceInfo(10, 15));
+		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.FAIRY, ModArmour.EuroditeLeggingsCR1, new PriceInfo(10, 15));
+		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.FAIRY, ModArmour.EuroditeHelmetCR2, new PriceInfo(10, 15));
+		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.FAIRY, ModArmour.EuroditeChestplateCR2, new PriceInfo(10, 15));
+		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.FAIRY, ModArmour.EuroditeLeggingsCR2, new PriceInfo(10, 15));
+		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.FAIRY, ModArmour.EuroditeHelmetCR3, new PriceInfo(10, 15));
+		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.FAIRY, ModArmour.EuroditeChestplateCR3, new PriceInfo(10, 15));
+		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.FAIRY, ModArmour.EuroditeLeggingsCR3, new PriceInfo(10, 15));
+		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.FAIRY, ModArmour.EuroditeHelmetCR4, new PriceInfo(10, 15));
+		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.FAIRY, ModArmour.EuroditeLeggingsCR4, new PriceInfo(10, 15));
+		 //To Token Trade
 		 AOTATradeRegistry.addItemToTokenRecipe(EnumTradeEntity.FAIRY, Items.WHEAT, new PriceInfo(-10, -15));
+
 		 addShapelessRecipe(new ItemStack(Items.PAPER, 5), Items.WHEAT, Items.WHEAT, Items.WHEAT, Items.WHEAT, Items.WHEAT);
 		 
 		 //RED
@@ -92,7 +148,7 @@ public class RecipeHandler {
 		 addShapelessRecipe(new ItemStack(ModArmour.EuroditeLeggingsY3), Items.IRON_LEGGINGS, "dyeYellow", "dyeYellow", "dyeYellow");
 
 
-		 //Holy Knights
+		 //Holly Knights
 		 addShapelessRecipe(new ItemStack(ModArmour.EuroditeHelmetCR1), Items.IRON_HELMET, Items.WRITTEN_BOOK, "ingotGold", "ingotIron");
 		 addShapelessRecipe(new ItemStack(ModArmour.EuroditeChestplateCR1), Items.IRON_CHESTPLATE, Items.WRITTEN_BOOK, "ingotGold", "ingotIron");
 		 addShapelessRecipe(new ItemStack(ModArmour.EuroditeLeggingsCR1), Items.IRON_LEGGINGS, "dyeWhite", "dyeRed");
