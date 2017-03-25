@@ -141,17 +141,17 @@ public abstract class EntityTradeable extends EntityCreature implements IMerchan
 
     @Override
     protected SoundEvent getAmbientSound() {
-        return this.isTrading() ? SoundEvents.ENTITY_VILLAGER_TRADING : SoundEvents.ENTITY_VILLAGER_AMBIENT;
+        return this.isTrading() ? SoundEvents.ENTITY_GHAST_WARN : SoundEvents.ENTITY_GHAST_AMBIENT;
     }
 
     @Override
     protected SoundEvent getHurtSound() {
-        return SoundEvents.ENTITY_VILLAGER_HURT;
+        return SoundEvents.ENTITY_GHAST_HURT;
     }
 
     @Override
     protected SoundEvent getDeathSound() {
-        return SoundEvents.ENTITY_VILLAGER_DEATH;
+        return SoundEvents.ENTITY_GHAST_DEATH;
     }
 
     @Nullable
@@ -191,7 +191,7 @@ public abstract class EntityTradeable extends EntityCreature implements IMerchan
     public void useRecipe(MerchantRecipe recipe) {
         recipe.incrementToolUses();
         this.livingSoundTime = -this.getTalkInterval();
-        this.playSound(SoundEvents.ENTITY_VILLAGER_YES, this.getSoundVolume(), this.getSoundPitch());
+        this.playSound(SoundEvents.ENTITY_GHAST_SHOOT, this.getSoundVolume()-20, this.getSoundPitch());
         int i = 3 + this.rand.nextInt(4);
 
         if (recipe.getToolUses() == 1 || this.rand.nextInt(5) == 0) {
@@ -220,7 +220,7 @@ public abstract class EntityTradeable extends EntityCreature implements IMerchan
     public void verifySellingItem(ItemStack stack) {
         if (!this.world.isRemote && this.livingSoundTime > -this.getTalkInterval() + 20) {
             this.livingSoundTime = -this.getTalkInterval();
-            this.playSound(stack.isEmpty() ? SoundEvents.ENTITY_VILLAGER_NO : SoundEvents.ENTITY_VILLAGER_YES, this.getSoundVolume(), this.getSoundPitch());
+            this.playSound(stack.isEmpty() ? SoundEvents.ENTITY_GHAST_SCREAM : SoundEvents.ENTITY_GHAST_SHOOT, this.getSoundVolume()-20, this.getSoundPitch());
         }
     }
 

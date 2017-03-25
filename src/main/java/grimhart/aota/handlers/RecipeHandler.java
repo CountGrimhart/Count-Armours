@@ -6,6 +6,7 @@ import grimhart.aota.init.ModItems;
 import grimhart.aota.trading.AOTATradeRegistry;
 import grimhart.aota.trading.EnumTradeEntity;
 import grimhart.aota.trading.PriceInfo;
+import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.common.registry.GameRegistry;
@@ -17,62 +18,65 @@ public class RecipeHandler {
 	 public static void registerCraftingRecipes() {
 		 addRecipe(new ItemStack(ModItems.token_bag, 1), "CCC", "CCC", "CCC", 'I', "ingotIron", 'S', "stickWood", 'C', ModItems.trading_token);
 		 addRecipe(new ItemStack(ModTools.longSword, 1), " I ", " I ", "CS ", 'I', "ingotIron", 'S', "stickWood", 'C', ModItems.token_bag);
-
-		 AOTATradeRegistry.addItemToTokenRecipe(EnumTradeEntity.FAIRY, Items.WHEAT, new PriceInfo(-10, -15));
+		 //To Token Trade
+		 AOTATradeRegistry.addItemToTokenRecipe(EnumTradeEntity.FAIRY, Items.BREAD, new PriceInfo(-10, -15));
+		 AOTATradeRegistry.addItemToTokenRecipe(EnumTradeEntity.FAIRY, Items.CAKE, new PriceInfo(-1, -2));
 		 //To Item Trade
-		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.FAIRY, ModTools.longSword, new PriceInfo(10, 15));
+		 //AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.FAIRY, ModTools.longSword, new PriceInfo(10, 15));
+
+		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.FAIRY, ModArmour.EuroditeHelmetB, new PriceInfo(5, 10));
+		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.FAIRY, ModArmour.EuroditeChestplateB, new PriceInfo(5, 10));
 		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.FAIRY, ModArmour.EuroditeHelmet, new PriceInfo(10, 15));
 		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.FAIRY, ModArmour.EuroditeChestplate, new PriceInfo(10, 15));
-		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.FAIRY, ModArmour.EuroditeLeggings, new PriceInfo(10, 15));
+		 //AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.FAIRY, ModArmour.EuroditeLeggings, new PriceInfo(10, 15));
 		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.FAIRY, ModArmour.EuroditeBoots, new PriceInfo(10, 15));
-		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.FAIRY, ModArmour.EuroditeHelmetB, new PriceInfo(10, 15));
-		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.FAIRY, ModArmour.EuroditeChestplateB, new PriceInfo(10, 15));
-		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.FAIRY, ModArmour.EuroditeLeggingsB, new PriceInfo(10, 15));
+		 //AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.FAIRY, ModArmour.EuroditeLeggingsB, new PriceInfo(10, 15));
 		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.FAIRY, ModArmour.EuroditeHelmetC, new PriceInfo(10, 15));
 		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.FAIRY, ModArmour.EuroditeChestplateC, new PriceInfo(10, 15));
-		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.FAIRY, ModArmour.EuroditeLeggingsC, new PriceInfo(10, 15));
+		 //AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.FAIRY, ModArmour.EuroditeLeggingsC, new PriceInfo(10, 15));
 		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.FAIRY, ModArmour.EuroditeHelmetD, new PriceInfo(10, 15));
 		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.FAIRY, ModArmour.EuroditeChestplateD, new PriceInfo(10, 15));
-		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.FAIRY, ModArmour.EuroditeLeggingsD, new PriceInfo(10, 15));
+		 //AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.FAIRY, ModArmour.EuroditeLeggingsD, new PriceInfo(10, 15));
 		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.FAIRY, ModArmour.EuroditeHelmetE, new PriceInfo(10, 15));
 		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.FAIRY, ModArmour.EuroditeChestplateE, new PriceInfo(10, 15));
-		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.FAIRY, ModArmour.EuroditeLeggingsE, new PriceInfo(10, 15));
+		 //AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.FAIRY, ModArmour.EuroditeLeggingsE, new PriceInfo(10, 15));
 		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.FAIRY, ModArmour.EuroditeHelmetF, new PriceInfo(10, 15));
 		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.FAIRY, ModArmour.EuroditeChestplateF, new PriceInfo(10, 15));
-		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.FAIRY, ModArmour.EuroditeLeggingsF, new PriceInfo(10, 15));
-		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.FAIRY, ModArmour.EuroditeHelmetG1, new PriceInfo(10, 15));
-		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.FAIRY, ModArmour.EuroditeChestplateG1, new PriceInfo(10, 15));
-		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.FAIRY, ModArmour.EuroditeLeggingsG1, new PriceInfo(10, 15));
-		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.FAIRY, ModArmour.EuroditeHelmetG2, new PriceInfo(10, 15));
-		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.FAIRY, ModArmour.EuroditeChestplateG2, new PriceInfo(10, 15));
-		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.FAIRY, ModArmour.EuroditeLeggingsG2, new PriceInfo(10, 15));
-		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.FAIRY, ModArmour.EuroditeHelmetG3, new PriceInfo(10, 15));
-		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.FAIRY, ModArmour.EuroditeChestplateG3, new PriceInfo(10, 15));
-		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.FAIRY, ModArmour.EuroditeLeggingsG3, new PriceInfo(10, 15));
-		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.FAIRY, ModArmour.EuroditeHelmetP1, new PriceInfo(10, 15));
-		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.FAIRY, ModArmour.EuroditeChestplateP1, new PriceInfo(10, 15));
-		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.FAIRY, ModArmour.EuroditeLeggingsP1, new PriceInfo(10, 15));
-		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.FAIRY, ModArmour.EuroditeHelmetP2, new PriceInfo(10, 15));
-		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.FAIRY, ModArmour.EuroditeChestplateP2, new PriceInfo(10, 15));
-		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.FAIRY, ModArmour.EuroditeLeggingsP2, new PriceInfo(10, 15));
-		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.FAIRY, ModArmour.EuroditeLeggingsP3, new PriceInfo(10, 15));
-		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.FAIRY, ModArmour.EuroditeLeggingsO1, new PriceInfo(10, 15));
-		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.FAIRY, ModArmour.EuroditeLeggingsO2, new PriceInfo(10, 15));
-		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.FAIRY, ModArmour.EuroditeLeggingsO3, new PriceInfo(10, 15));
-		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.FAIRY, ModArmour.EuroditeLeggingsY1, new PriceInfo(10, 15));
-		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.FAIRY, ModArmour.EuroditeLeggingsY2, new PriceInfo(10, 15));
-		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.FAIRY, ModArmour.EuroditeLeggingsY3, new PriceInfo(10, 15));
+		 //AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.FAIRY, ModArmour.EuroditeLeggingsF, new PriceInfo(10, 15));
+		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.FAIRY, ModArmour.EuroditeHelmetG1, new PriceInfo(30, 35));
+		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.FAIRY, ModArmour.EuroditeChestplateG1, new PriceInfo(30, 35));
+		 //AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.FAIRY, ModArmour.EuroditeLeggingsG1, new PriceInfo(10, 15));
+		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.FAIRY, ModArmour.EuroditeHelmetG2, new PriceInfo(30, 35));
+		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.FAIRY, ModArmour.EuroditeChestplateG2, new PriceInfo(30, 35));
+		// AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.FAIRY, ModArmour.EuroditeLeggingsG2, new PriceInfo(10, 15));
+		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.FAIRY, ModArmour.EuroditeHelmetG3, new PriceInfo(30, 35));
+		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.FAIRY, ModArmour.EuroditeChestplateG3, new PriceInfo(30, 35));
+		// AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.FAIRY, ModArmour.EuroditeLeggingsG3, new PriceInfo(10, 15));
+		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.FAIRY, ModArmour.EuroditeHelmetP1, new PriceInfo(30, 35));
+		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.FAIRY, ModArmour.EuroditeChestplateP1, new PriceInfo(30, 35));
+		// AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.FAIRY, ModArmour.EuroditeLeggingsP1, new PriceInfo(10, 15));
+		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.FAIRY, ModArmour.EuroditeHelmetP2, new PriceInfo(30, 35));
+		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.FAIRY, ModArmour.EuroditeChestplateP2, new PriceInfo(30, 35));
+		 //AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.FAIRY, ModArmour.EuroditeLeggingsP2, new PriceInfo(10, 15));
+		 //AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.FAIRY, ModArmour.EuroditeLeggingsP3, new PriceInfo(10, 15));
+		 //AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.FAIRY, ModArmour.EuroditeLeggingsO1, new PriceInfo(10, 15));
+		 //AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.FAIRY, ModArmour.EuroditeLeggingsO2, new PriceInfo(10, 15));
+		 //AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.FAIRY, ModArmour.EuroditeLeggingsO3, new PriceInfo(10, 15));
+		 //AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.FAIRY, ModArmour.EuroditeLeggingsY1, new PriceInfo(10, 15));
+		 //AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.FAIRY, ModArmour.EuroditeLeggingsY2, new PriceInfo(10, 15));
+		 //AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.FAIRY, ModArmour.EuroditeLeggingsY3, new PriceInfo(10, 15));
 		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.FAIRY, ModArmour.EuroditeHelmetCR1, new PriceInfo(10, 15));
-		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.FAIRY, ModArmour.EuroditeChestplateCR1, new PriceInfo(10, 15));
-		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.FAIRY, ModArmour.EuroditeLeggingsCR1, new PriceInfo(10, 15));
 		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.FAIRY, ModArmour.EuroditeHelmetCR2, new PriceInfo(10, 15));
-		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.FAIRY, ModArmour.EuroditeChestplateCR2, new PriceInfo(10, 15));
-		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.FAIRY, ModArmour.EuroditeLeggingsCR2, new PriceInfo(10, 15));
 		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.FAIRY, ModArmour.EuroditeHelmetCR3, new PriceInfo(10, 15));
-		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.FAIRY, ModArmour.EuroditeChestplateCR3, new PriceInfo(10, 15));
-		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.FAIRY, ModArmour.EuroditeLeggingsCR3, new PriceInfo(10, 15));
 		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.FAIRY, ModArmour.EuroditeHelmetCR4, new PriceInfo(10, 15));
-		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.FAIRY, ModArmour.EuroditeLeggingsCR4, new PriceInfo(10, 15));
+		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.FAIRY, ModArmour.EuroditeChestplateCR1, new PriceInfo(10, 15));
+		 //AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.FAIRY, ModArmour.EuroditeLeggingsCR1, new PriceInfo(10, 15));
+		 //AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.FAIRY, ModArmour.EuroditeLeggingsCR2, new PriceInfo(10, 15));
+		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.FAIRY, ModArmour.EuroditeChestplateCR3, new PriceInfo(10, 15));
+		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.FAIRY, ModArmour.EuroditeChestplateCR2, new PriceInfo(10, 15));
+		 //AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.FAIRY, ModArmour.EuroditeLeggingsCR3, new PriceInfo(10, 15));
+
+		 //AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.FAIRY, ModArmour.EuroditeLeggingsCR4, new PriceInfo(10, 15));
 		 /*
 		 //Sunjin Items
 		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.AKUMA, ModArmour.SunjinHelmetSB1, new PriceInfo(10, 15));
@@ -144,61 +148,61 @@ public class RecipeHandler {
 		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.VOLUCRIS, ModArmour.SigmaLeggingsG1, new PriceInfo(10, 15));
 		 AOTATradeRegistry.addTokenToItemRecipe(EnumTradeEntity.VOLUCRIS, ModArmour.SigmaLeggingsG2, new PriceInfo(10, 15));
 		 */
-		 //To Token Trade
+
 
 
 		 addShapelessRecipe(new ItemStack(Items.PAPER, 5), Items.WHEAT, Items.WHEAT, Items.WHEAT, Items.WHEAT, Items.WHEAT);
 		 
 		 //RED
-		 addShapelessRecipe(new ItemStack(ModArmour.EuroditeHelmet, 1), Items.IRON_HELMET, Items.POTATO, Items.POTATO);
-		 addShapelessRecipe(new ItemStack(ModArmour.EuroditeChestplate, 1), Items.IRON_CHESTPLATE,  Items.POTATO, Items.POTATO);
+		 //addShapelessRecipe(new ItemStack(ModArmour.EuroditeHelmet, 1), Items.IRON_HELMET, Items.POTATO, Items.POTATO);
+		 //addShapelessRecipe(new ItemStack(ModArmour.EuroditeChestplate, 1), Items.IRON_CHESTPLATE,  Items.POTATO, Items.POTATO);
 		 addShapelessRecipe(new ItemStack(ModArmour.EuroditeLeggings, 1), Items.IRON_LEGGINGS,  "dyeRed");
-		 addShapelessRecipe(new ItemStack(ModArmour.EuroditeBoots, 1), Items.IRON_BOOTS,  Items.POTATO, Items.POTATO);
-		 
-		 addShapelessRecipe(new ItemStack(ModArmour.EuroditeHelmetB, 1), Items.IRON_HELMET,  Items.POTATO);
-		 addShapelessRecipe(new ItemStack(ModArmour.EuroditeChestplateB, 1), Items.IRON_CHESTPLATE,  Items.POTATO);
+		 //addShapelessRecipe(new ItemStack(ModArmour.EuroditeBoots, 1), Items.IRON_BOOTS,  Items.POTATO, Items.POTATO);
+
+		 //addShapelessRecipe(new ItemStack(ModArmour.EuroditeHelmetB, 1), Items.IRON_HELMET,  Items.POTATO);
+		 //addShapelessRecipe(new ItemStack(ModArmour.EuroditeChestplateB, 1), Items.IRON_CHESTPLATE,  Items.POTATO);
 		 addShapelessRecipe(new ItemStack(ModArmour.EuroditeLeggingsB, 1), Items.IRON_LEGGINGS,  "dyeRed", "dyeRed");
 	
-		 addShapelessRecipe(new ItemStack(ModArmour.EuroditeHelmetC, 1), Items.IRON_HELMET,  Items.POTATO,  Items.POTATO,  Items.POTATO);
-		 addShapelessRecipe(new ItemStack(ModArmour.EuroditeChestplateC, 1), Items.IRON_CHESTPLATE,  Items.POTATO,  Items.POTATO,  Items.POTATO);
+		 //addShapelessRecipe(new ItemStack(ModArmour.EuroditeHelmetC, 1), Items.IRON_HELMET,  Items.POTATO,  Items.POTATO,  Items.POTATO);
+		 //addShapelessRecipe(new ItemStack(ModArmour.EuroditeChestplateC, 1), Items.IRON_CHESTPLATE,  Items.POTATO,  Items.POTATO,  Items.POTATO);
 		 addShapelessRecipe(new ItemStack(ModArmour.EuroditeLeggingsC, 1), Items.IRON_LEGGINGS,  "dyeRed", "dyeRed", "dyeRed");
 
 		 //Blue
-		 addShapelessRecipe(new ItemStack(ModArmour.EuroditeHelmetD), Items.IRON_HELMET,  Items.POTATO, Items.POTATO, Items.POTATO, Items.POTATO);
-		 addShapelessRecipe(new ItemStack(ModArmour.EuroditeChestplateD), Items.IRON_CHESTPLATE,  Items.POTATO, Items.POTATO, Items.POTATO, Items.POTATO);
+		 //addShapelessRecipe(new ItemStack(ModArmour.EuroditeHelmetD), Items.IRON_HELMET,  Items.POTATO, Items.POTATO, Items.POTATO, Items.POTATO);
+		 //addShapelessRecipe(new ItemStack(ModArmour.EuroditeChestplateD), Items.IRON_CHESTPLATE,  Items.POTATO, Items.POTATO, Items.POTATO, Items.POTATO);
 		 addShapelessRecipe(new ItemStack(ModArmour.EuroditeLeggingsD), Items.IRON_LEGGINGS,  "dyeBlue");
 		 //
-		 addShapelessRecipe(new ItemStack(ModArmour.EuroditeHelmetE), Items.IRON_HELMET,  Items.POTATO, Items.POTATO, Items.POTATO, Items.POTATO, Items.POTATO);
-		 addShapelessRecipe(new ItemStack(ModArmour.EuroditeChestplateE), Items.IRON_CHESTPLATE,  Items.POTATO, Items.POTATO, Items.POTATO, Items.POTATO, Items.POTATO);
+		 //addShapelessRecipe(new ItemStack(ModArmour.EuroditeHelmetE), Items.IRON_HELMET,  Items.POTATO, Items.POTATO, Items.POTATO, Items.POTATO, Items.POTATO);
+		 //addShapelessRecipe(new ItemStack(ModArmour.EuroditeChestplateE), Items.IRON_CHESTPLATE,  Items.POTATO, Items.POTATO, Items.POTATO, Items.POTATO, Items.POTATO);
 		 addShapelessRecipe(new ItemStack(ModArmour.EuroditeLeggingsE), Items.IRON_LEGGINGS,  "dyeBlue", "dyeBlue");
 		 //
-		 addShapelessRecipe(new ItemStack(ModArmour.EuroditeHelmetF), Items.IRON_HELMET,  Items.POTATO, Items.POTATO, Items.POTATO, Items.POTATO, Items.POTATO, Items.POTATO);
-		 addShapelessRecipe(new ItemStack(ModArmour.EuroditeChestplateF), Items.IRON_CHESTPLATE,  Items.POTATO, Items.POTATO, Items.POTATO, Items.POTATO, Items.POTATO, Items.POTATO);
+		 //addShapelessRecipe(new ItemStack(ModArmour.EuroditeHelmetF), Items.IRON_HELMET,  Items.POTATO, Items.POTATO, Items.POTATO, Items.POTATO, Items.POTATO, Items.POTATO);
+		 //addShapelessRecipe(new ItemStack(ModArmour.EuroditeChestplateF), Items.IRON_CHESTPLATE,  Items.POTATO, Items.POTATO, Items.POTATO, Items.POTATO, Items.POTATO, Items.POTATO);
 		 addShapelessRecipe(new ItemStack(ModArmour.EuroditeLeggingsF), Items.IRON_LEGGINGS,  "dyeBlue", "dyeBlue", "dyeBlue");
 		 
 		 
 		 
 		 //Green + Paladin
-		 addShapelessRecipe(new ItemStack(ModArmour.EuroditeHelmetG1), Items.IRON_HELMET, Items.WRITTEN_BOOK);
-		 addShapelessRecipe(new ItemStack(ModArmour.EuroditeChestplateG1), Items.IRON_CHESTPLATE, Items.WRITTEN_BOOK);
+		 //addShapelessRecipe(new ItemStack(ModArmour.EuroditeHelmetG1), Items.IRON_HELMET, Items.WRITTEN_BOOK);
+		 //addShapelessRecipe(new ItemStack(ModArmour.EuroditeChestplateG1), Items.IRON_CHESTPLATE, Items.WRITTEN_BOOK);
 		 addShapelessRecipe(new ItemStack(ModArmour.EuroditeLeggingsG1), Items.IRON_LEGGINGS, "dyeGreen");
 		 //
-		 addShapelessRecipe(new ItemStack(ModArmour.EuroditeHelmetG2), Items.IRON_HELMET, Items.WRITTEN_BOOK, "ingotGold");
-		 addShapelessRecipe(new ItemStack(ModArmour.EuroditeChestplateG2), Items.IRON_CHESTPLATE, Items.WRITTEN_BOOK, "ingotGold");
+		 //addShapelessRecipe(new ItemStack(ModArmour.EuroditeHelmetG2), Items.IRON_HELMET, Items.WRITTEN_BOOK, "ingotGold");
+		 //addShapelessRecipe(new ItemStack(ModArmour.EuroditeChestplateG2), Items.IRON_CHESTPLATE, Items.WRITTEN_BOOK, "ingotGold");
 		 addShapelessRecipe(new ItemStack(ModArmour.EuroditeLeggingsG2), Items.IRON_LEGGINGS, "dyeGreen", "dyeGreen");
 		 //
-		 addShapelessRecipe(new ItemStack(ModArmour.EuroditeHelmetG3), Items.IRON_HELMET, Items.WRITTEN_BOOK, "ingotGold", "ingotGold");
-		 addShapelessRecipe(new ItemStack(ModArmour.EuroditeChestplateG3), Items.IRON_CHESTPLATE, Items.WRITTEN_BOOK, Items.WRITTEN_BOOK, "ingotGold", "ingotGold");
+		 //addShapelessRecipe(new ItemStack(ModArmour.EuroditeHelmetG3), Items.IRON_HELMET, Items.WRITTEN_BOOK, "ingotGold", "ingotGold");
+		 //addShapelessRecipe(new ItemStack(ModArmour.EuroditeChestplateG3), Items.IRON_CHESTPLATE, Items.WRITTEN_BOOK, Items.WRITTEN_BOOK, "ingotGold", "ingotGold");
 		 addShapelessRecipe(new ItemStack(ModArmour.EuroditeLeggingsG3), Items.IRON_LEGGINGS, "dyeGreen", "dyeGreen", "dyeGreen");
 
 
 		 //Purple + Ash knight
-		 addShapelessRecipe(new ItemStack(ModArmour.EuroditeHelmetP1), Items.IRON_HELMET, Items.BLAZE_POWDER);
-		 addShapelessRecipe(new ItemStack(ModArmour.EuroditeChestplateP1), Items.IRON_CHESTPLATE, Items.BLAZE_POWDER);
+		 //addShapelessRecipe(new ItemStack(ModArmour.EuroditeHelmetP1), Items.IRON_HELMET, Items.BLAZE_POWDER);
+		 //addShapelessRecipe(new ItemStack(ModArmour.EuroditeChestplateP1), Items.IRON_CHESTPLATE, Items.BLAZE_POWDER);
 		 addShapelessRecipe(new ItemStack(ModArmour.EuroditeLeggingsP1), Items.IRON_LEGGINGS, "dyePurple");
 		 //
-		 addShapelessRecipe(new ItemStack(ModArmour.EuroditeHelmetP2), Items.IRON_HELMET, Items.BLAZE_POWDER, "ingotGold");
-		 addShapelessRecipe(new ItemStack(ModArmour.EuroditeChestplateP2), Items.IRON_CHESTPLATE, Items.BLAZE_POWDER, "ingotGold");
+		 //addShapelessRecipe(new ItemStack(ModArmour.EuroditeHelmetP2), Items.IRON_HELMET, Items.BLAZE_POWDER, "ingotGold");
+		 //addShapelessRecipe(new ItemStack(ModArmour.EuroditeChestplateP2), Items.IRON_CHESTPLATE, Items.BLAZE_POWDER, "ingotGold");
 		 addShapelessRecipe(new ItemStack(ModArmour.EuroditeLeggingsP2), Items.IRON_LEGGINGS, "dyePurple", "dyePurple");
 		 //
 		 addShapelessRecipe(new ItemStack(ModArmour.EuroditeLeggingsP3), Items.IRON_LEGGINGS, "dyePurple", "dyePurple", "dyePurple");
@@ -221,19 +225,19 @@ public class RecipeHandler {
 
 
 		 //Holly Knights
-		 addShapelessRecipe(new ItemStack(ModArmour.EuroditeHelmetCR1), Items.IRON_HELMET, Items.WRITTEN_BOOK, "ingotGold", "ingotIron");
-		 addShapelessRecipe(new ItemStack(ModArmour.EuroditeChestplateCR1), Items.IRON_CHESTPLATE, Items.WRITTEN_BOOK, "ingotGold", "ingotIron");
+		 //addShapelessRecipe(new ItemStack(ModArmour.EuroditeHelmetCR1), Items.IRON_HELMET, Items.WRITTEN_BOOK, "ingotGold", "ingotIron");
+		 //addShapelessRecipe(new ItemStack(ModArmour.EuroditeChestplateCR1), Items.IRON_CHESTPLATE, Items.WRITTEN_BOOK, "ingotGold", "ingotIron");
 		 addShapelessRecipe(new ItemStack(ModArmour.EuroditeLeggingsCR1), Items.IRON_LEGGINGS, "dyeWhite", "dyeRed");
 		 //
-		 addShapelessRecipe(new ItemStack(ModArmour.EuroditeHelmetCR2), Items.IRON_HELMET, Items.WRITTEN_BOOK, "ingotIron");
-		 addShapelessRecipe(new ItemStack(ModArmour.EuroditeChestplateCR2), Items.IRON_CHESTPLATE, Items.WRITTEN_BOOK);
+		 //addShapelessRecipe(new ItemStack(ModArmour.EuroditeHelmetCR2), Items.IRON_HELMET, Items.WRITTEN_BOOK, "ingotIron");
+		 //addShapelessRecipe(new ItemStack(ModArmour.EuroditeChestplateCR2), Items.IRON_CHESTPLATE, Items.WRITTEN_BOOK);
 		 addShapelessRecipe(new ItemStack(ModArmour.EuroditeLeggingsCR2), Items.IRON_LEGGINGS, "dyeBlack", "dyeWhite");
 		 //
-		 addShapelessRecipe(new ItemStack(ModArmour.EuroditeHelmetCR3), Items.IRON_HELMET, Items.WRITTEN_BOOK, Items.SPIDER_EYE, Items.ROTTEN_FLESH, Items.BONE);
-		 addShapelessRecipe(new ItemStack(ModArmour.EuroditeChestplateCR3), Items.IRON_CHESTPLATE, Items.WRITTEN_BOOK, Items.SPIDER_EYE, Items.ROTTEN_FLESH, Items.BONE);
+		 //addShapelessRecipe(new ItemStack(ModArmour.EuroditeHelmetCR3), Items.IRON_HELMET, Items.WRITTEN_BOOK, Items.SPIDER_EYE, Items.ROTTEN_FLESH, Items.BONE);
+		 //addShapelessRecipe(new ItemStack(ModArmour.EuroditeChestplateCR3), Items.IRON_CHESTPLATE, Items.WRITTEN_BOOK, Items.SPIDER_EYE, Items.ROTTEN_FLESH, Items.BONE);
 		 addShapelessRecipe(new ItemStack(ModArmour.EuroditeLeggingsCR3), Items.IRON_LEGGINGS, "dyeWhite", "dyeBlack", "dyeWhite");
 		 //
-		 addShapelessRecipe(new ItemStack(ModArmour.EuroditeHelmetCR4), Items.IRON_HELMET, Items.WRITTEN_BOOK, "ingotGold");
+		 //addShapelessRecipe(new ItemStack(ModArmour.EuroditeHelmetCR4), Items.IRON_HELMET, Items.WRITTEN_BOOK, "ingotGold");
 		 addShapelessRecipe(new ItemStack(ModArmour.EuroditeLeggingsCR4), Items.IRON_LEGGINGS, "dyeRed", "dyeWhite", "dyeRed");
 
 
